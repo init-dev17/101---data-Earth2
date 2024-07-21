@@ -191,18 +191,11 @@ h1{
 
 
 
-.civs{
-    background-color: white;
-    width: 700px;
+.civs, .cydroids, .jewels{
+    background-color: whitesmoke;
+    width: 1000px;
 }
-.cydroids{
-    background-color: white;
-    width: 700px;
-}
-.jewels{
-    background-color: white;
-    width: 700px;
-}
+
 
 
 

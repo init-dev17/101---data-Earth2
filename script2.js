@@ -1,0 +1,33 @@
+
+// supprimer les . et remplacer " " par "_" dans les index
+// supprimer les , dans les données 
+
+
+let donnees = [];
+/*donnees.push({date:"1 janvier",Jewels:"1000000",Tokens:"2000000", Cydroids:"1000000"});
+donnees.push({date:"2 janvier",Jewels:"1100000",Tokens:"2100000", Cydroids:"1500000"});
+donnees.push({date:"3 janvier",Jewels:"1200000",Tokens:"2200000", Cydroids:"2000000"});*/
+donnees.push({date:"1 avril",TOTAL_TIER_1_JEWELS_MINED :"77,881,767",MINTED_TOKENS: "311,145,376",
+    E_THER_COLLECTED_PAST_24_HOURS: "1,688,114", NO_OF_CIVILIANS:"1,560,866", NO_OF_RAID_COMMANDERS:"420,699", NO_OF_E_THER_RECKONERS:"424,190", NO_OF_CYDROID_TECHNICIANS: "433,761", NO_OF_GEOLOGISTS: "282,216"});
+donnees.push({date:"11 juillet",TOTAL_TIER_1_JEWELS_MINED :"77,881,767",MINTED_TOKENS: "311,145,376",
+    E_THER_COLLECTED_PAST_24_HOURS: "1,688,114", NO_OF_CIVILIANS:"1,560,866", NO_OF_RAID_COMMANDERS:"420,699", NO_OF_E_THER_RECKONERS:"424,190", NO_OF_CYDROID_TECHNICIANS: "433,761", NO_OF_GEOLOGISTS: "282,216"}
+);
+database.push({date:"16 juillet",TOTAL_TIER_1_JEWELS_MINED :"78,381,767",MINTED_TOKENS: "311,145,376",
+    E_THER_COLLECTED_PAST_24_HOURS: "1,758,114", NO_OF_CIVILIANS:"1570866", NO_OF_RAID_COMMANDERS:"423,199", NO_OF_E_THER_RECKONERS:"426,990", NO_OF_CYDROID_TECHNICIANS: "437,061", NO_OF_GEOLOGISTS: "283,016"}
+);
+
+
+console.log(donnees);
+
+console.log(donnees[0].date + " " + donnees[0].Jewels);
+console.log(donnees[1].date);
+
+/*
+MINTED_TOKENS: "311,145,376"
+E-THER COLLECTED PAST 24 HOURS: "1,688,114"
+NO._OF_CIVILIANS:"1,560,866"
+NO._OF_RAID COMMANDERS:"420,699"
+NO. OF E-THER RECKONERS:"424,190"
+NO. OF CYDROID TECHNICIANS: "433,761"
+NO._OF_GEOLOGISTS: "282,216"
+*/

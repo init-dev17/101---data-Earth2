@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* ajuste mieux les boites, meilleure organisation */
+    list-style: none;
+}
+
+/* Fonts téléchargée sur Google et mis dans le dossier puis importée dans le projet
+https://fonts.google.com/specimen/DM+Serif+Display?query=dm+ser */
+@font-face {
+    font-family: "Antonio";
+    src: url(./assets/fonts/Antonio/Antonio-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: "Audiowide";
+    src: url(./assets/Fonts/Audiowide/Audiowide-Regular.ttf);
+}
+@font-face { 
+    font-family: "Honk";
+    src: url(./assets/Fonts/Honk/Honk-Regular-VariableFont_MORF\,SHLN.ttf);
+}
+@font-face { 
+    font-family: "Jersey25";
+    src: url(./assets/Fonts/Jersey_25/Jersey25-Regular.ttf);
+}
+@font-face { 
+    font-family: "Jersey25Charted";
+    src: url(./assets/Fonts/Jersey_25_Charted/Jersey25Charted-Regular.ttf);
+}
+@font-face { 
+    font-family: "OdibeeSans";
+    src: url(./assets/Fonts/Odibee_Sans/OdibeeSans-Regular.ttf);
+}
+@font-face { 
+    font-family: "Saira";
+    src: url(./assets/Fonts/Saira/Saira-VariableFont_wdth\,wght.ttf);
+}
+@font-face { 
+    font-family: "Tektur";
+    src: url(./assets/Fonts/Tektur/Tektur-VariableFont_wdth\,wght.ttf);
+}
+
+
+
+body{
+    background-color: #191A1F;
+}
+
+nav{
+    background: #191A1F;
+    padding: 10px;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-evenly;  
+    align-items : center; 
+
+    
+
+}
+nav a, nav #language{
+    color: white;
+    height: 86%;
+    font-family: "Audiowide";
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration:none;
+    user-select : none;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin: 5px 2%;
+}
+
+nav li{
+    position: relative;
+}
+
+nav li:first-child{
+    color: white;
+}
+nav li:first-child:before{
+    content:"";
+    width: 10%;
+    height: 5px;
+    position: absolute;
+    background-color: white;
+    transform: translateY(-20px);
+}
+
+nav li:hover:before{
+    content:"";
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    background-color: white;
+    transform: translateY(-20px);
+}
+
+nav li:last-child::before{
+    background: none;
+}
+#language{
+    background: #292E42;
+    
+    padding: 5px 15px;
+    border-radius: 15px;
+
+}
+
+header{
+    background: url(./assets/img/earth-galaxy-elements-this-image-furnished-by-nasa.jpg) fixed center/cover;
+}
+
+#CODE{
+    height: 30px;
+    background: #578EF8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#CODE p{
+    color: white;
+    font-family: Audiowide;
+    font-size: 13.5px;
+}
+
+p mark {
+    color: white;
+    letter-spacing: 3px;
+    background-color: #292E42;
+}
+
+.main-header, .second-header{
+    background: linear-gradient(217deg, rgba(0, 0, 0, 0.884), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(0, 0, 0, 0.795), rgba(0,255,0,0) 70.71%),
+            linear-gradient(360deg, rgba(192, 86, 0, 0.352), rgba(0,0,255,0) 70.71%);
+    height: 35vh;
+    text-align: center;  
+    padding: 60px;
+}
+
+
+body:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0;
+    background-color: rgb(17, 17, 17);
+    animation: animBefore 1.5s ease forwards;
+    animation-delay: 0.15s;
+  }
+@keyframes animBefore {
+    to {
+      opacity: 0;
+    }
+}
+
+#section1 p{
+    color: white;
+    font-family: "Tektur";
+    font-size: 1rem;
+    text-align: center;  
+    margin: 0px 10%; 
+    padding: 40px;
+    
+}
+
+h1{
+    color: white;
+}
+
+
+.charts{
+    display: grid;
+    justify-items: center;
+}
+.charts span{
+    color: white;
+    font-family: "Audiowide";
+
+    font-size: 2rem;
+    margin: 30px;
+    margin-top: 100px;
+}
+
+
+
+.civs{
+    background-color: white;
+    width: 700px;
+}
+.cydroids{
+    background-color: white;
+    width: 700px;
+}
+.jewels{
+    background-color: white;
+    width: 700px;
+}
+
+
+
+footer{
+    margin-top: 200px;
+    display: flex;
+    justify-content: end;
+
+    font-family: "Tektur";
+
+    color: white;
+    
+}
+
+footer a{
+    color: #578EF8;
+}
+
+

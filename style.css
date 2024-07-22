@@ -126,13 +126,21 @@ header{
     color: white;
     font-family: Audiowide;
     font-size: 13.5px;
+    user-select : none;
+
 }
 
 p mark {
     color: white;
     letter-spacing: 3px;
     background-color: #292E42;
+    user-select: all;
+    font-size: 16px;
 }
+p mark::selection {
+    background: white;
+    color: black;
+  }
 
 .main-header, .second-header{
     background: linear-gradient(217deg, rgba(0, 0, 0, 0.884), rgba(255,0,0,0) 70.71%),

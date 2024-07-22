@@ -3,7 +3,16 @@
 
 
 let lastUpdate = document.getElementById("lastUpdate");
-console.log(lastUpdate);
+let technicians24h = document.getElementById("technicians24h");
+let technicians7days = document.getElementById("technicians7days");
+let reckoners24h = document.getElementById("reckoners24h");
+let reckoners7days = document.getElementById("reckoners7days");
+let commanders24h = document.getElementById("commanders24h");
+let commanders7days = document.getElementById("commanders7days");
+let geologists24h = document.getElementById("geologists24h");
+let geologists7days = document.getElementById("geologists7days");
+
+
 
 
 
@@ -54,12 +63,12 @@ async function afficherDerniereDataJSON() {
     lastUpdate.innerHTML = array[array.length-1].date;
 
 
+    let commanders24hcalc = array[array.length-1].NO_OF_RAID_COMMANDERS - array[array.length-2].NO_OF_RAID_COMMANDERS;
+    let commanders7dayscalc = array[array.length-1].NO_OF_RAID_COMMANDERS - array[array.length-8].NO_OF_RAID_COMMANDERS;
+    commanders24h.innerHTML = commanders24hcalc;
+    commanders7days.innerHTML = commanders7dayscalc; 
 
-    console.log("Last 24h : ");
-    console.log(array[array.length-1].NO_OF_RAID_COMMANDERS - array[array.length-2].NO_OF_RAID_COMMANDERS);
 
-    console.log("Last 7 days  : ");
-    console.log(array[array.length-1].NO_OF_RAID_COMMANDERS - array[array.length-8].NO_OF_RAID_COMMANDERS);
 
 }
 afficherDerniereDataJSON();

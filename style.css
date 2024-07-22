@@ -212,6 +212,9 @@ h1{
 display: flex;
 }
 
+.civsData section {
+    padding: 25px;
+}
 
 .civs, .cydroids, .jewels{
     background-color: whitesmoke;

@@ -6,19 +6,32 @@ let lastUpdate = document.getElementById("lastUpdate");
 let technicians24h = document.getElementById("technicians24h");
 let technicians7days = document.getElementById("technicians7days");
 let techniciansOOS = document.getElementById("techniciansOOS");
+let techniciansEstimatedDate = document.getElementById("techniciansEstimatedDate");
 let reckoners24h = document.getElementById("reckoners24h");
 let reckoners7days = document.getElementById("reckoners7days");
 let reckonersOOS = document.getElementById("reckonersOOS");
+let reckonersEstimatedDate = document.getElementById("reckonersEstimatedDate");
 let commanders24h = document.getElementById("commanders24h");
 let commanders7days = document.getElementById("commanders7days");
 let commandersOOS = document.getElementById("commandersOOS");
+let commandersEstimatedDate = document.getElementById("commandersEstimatedDate");
 let geologists24h = document.getElementById("geologists24h");
 let geologists7days = document.getElementById("geologists7days");
 let geologistsOOS = document.getElementById("geologistsOOS");
+let geologistsEstimatedDate = document.getElementById("geologistsEstimatedDate");
 
 
-
-
+// Estimated date civs
+function dateAddDays(a, b) {
+    var d = new Date(b || new Date());
+    d.setDate(d.getDate() + a);
+    return d;
+}
+let today = new Date();
+let dansXjours = 60;
+// console.log(dateAddDays(dansXjours, today));
+// Format date avec .toDateString()
+// https://www.geeksforgeeks.org/how-to-format-a-date-in-javascript/
 
 
 const ctx = document.getElementById('e2data');
@@ -74,6 +87,8 @@ async function afficherDerniereDataJSON() {
     technicians24h.innerHTML = technicians24hcalc;
     technicians7days.innerHTML = technicians7dayscalc; 
     techniciansOOS.innerHTML = techniciansOOScalc; 
+    techniciansEstimatedDate.innerHTML = dateAddDays(techniciansOOScalc, today).toDateString();
+
 
     // Reckoners
     let reckoners24hcalc = array[array.length-1].NO_OF_ETHER_RECKONERS - array[array.length-2].NO_OF_ETHER_RECKONERS;
@@ -83,6 +98,7 @@ async function afficherDerniereDataJSON() {
     reckoners24h.innerHTML = reckoners24hcalc;
     reckoners7days.innerHTML = reckoners7dayscalc; 
     reckonersOOS.innerHTML = reckonersOOScalc;
+    reckonersEstimatedDate.innerHTML = dateAddDays(reckonersOOScalc, today).toDateString();
 
     // Commanders
     let commanders24hcalc = array[array.length-1].NO_OF_RAID_COMMANDERS - array[array.length-2].NO_OF_RAID_COMMANDERS;
@@ -91,6 +107,7 @@ async function afficherDerniereDataJSON() {
     commanders24h.innerHTML = commanders24hcalc;
     commanders7days.innerHTML = commanders7dayscalc; 
     commandersOOS.innerHTML = commandersOOScalc; 
+    commandersEstimatedDate.innerHTML = dateAddDays(commandersOOScalc, today).toDateString();
 
     // Geologists
     let geologists24hcalc = array[array.length-1].NO_OF_GEOLOGISTS - array[array.length-2].NO_OF_GEOLOGISTS;
@@ -99,6 +116,7 @@ async function afficherDerniereDataJSON() {
     geologists24h.innerHTML = geologists24hcalc;
     geologists7days.innerHTML = geologists7dayscalc; 
     geologistsOOS.innerHTML = geologistsOOScalc; 
+    geologistsEstimatedDate.innerHTML = dateAddDays(geologistsOOScalc, today).toDateString();
 
 
 }
@@ -239,3 +257,8 @@ fetch('data.json')
 04/06 -  3.4 M
 
 */
+
+
+
+
+

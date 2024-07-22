@@ -5,12 +5,16 @@
 let lastUpdate = document.getElementById("lastUpdate");
 let technicians24h = document.getElementById("technicians24h");
 let technicians7days = document.getElementById("technicians7days");
+let techniciansOOS = document.getElementById("techniciansOOS");
 let reckoners24h = document.getElementById("reckoners24h");
 let reckoners7days = document.getElementById("reckoners7days");
+let reckonersOOS = document.getElementById("reckonersOOS");
 let commanders24h = document.getElementById("commanders24h");
 let commanders7days = document.getElementById("commanders7days");
+let commandersOOS = document.getElementById("commandersOOS");
 let geologists24h = document.getElementById("geologists24h");
 let geologists7days = document.getElementById("geologists7days");
+let geologistsOOS = document.getElementById("geologistsOOS");
 
 
 
@@ -62,12 +66,39 @@ async function afficherDerniereDataJSON() {
 
     lastUpdate.innerHTML = array[array.length-1].date;
 
+    // Technicians
+    let technicians24hcalc = array[array.length-1].NO_OF_CYDROID_TECHNICIANS - array[array.length-2].NO_OF_CYDROID_TECHNICIANS;
+    let technicians7dayscalc = array[array.length-1].NO_OF_CYDROID_TECHNICIANS - array[array.length-7
+    ].NO_OF_CYDROID_TECHNICIANS;
+    let techniciansOOScalc = Math.trunc((500000-array[array.length-1].NO_OF_CYDROID_TECHNICIANS)/ (technicians7dayscalc/7));
+    technicians24h.innerHTML = technicians24hcalc;
+    technicians7days.innerHTML = technicians7dayscalc; 
+    techniciansOOS.innerHTML = techniciansOOScalc; 
 
+    // Reckoners
+    let reckoners24hcalc = array[array.length-1].NO_OF_ETHER_RECKONERS - array[array.length-2].NO_OF_ETHER_RECKONERS;
+    let reckoners7dayscalc = array[array.length-1].NO_OF_ETHER_RECKONERS - array[array.length-7
+    ].NO_OF_ETHER_RECKONERS;
+    let reckonersOOScalc = Math.trunc((500000-array[array.length-1].NO_OF_ETHER_RECKONERS)/ (reckoners7dayscalc/7));
+    reckoners24h.innerHTML = reckoners24hcalc;
+    reckoners7days.innerHTML = reckoners7dayscalc; 
+    reckonersOOS.innerHTML = reckonersOOScalc;
+
+    // Commanders
     let commanders24hcalc = array[array.length-1].NO_OF_RAID_COMMANDERS - array[array.length-2].NO_OF_RAID_COMMANDERS;
-    let commanders7dayscalc = array[array.length-1].NO_OF_RAID_COMMANDERS - array[array.length-8].NO_OF_RAID_COMMANDERS;
+    let commanders7dayscalc = array[array.length-1].NO_OF_RAID_COMMANDERS - array[array.length-7].NO_OF_RAID_COMMANDERS;
+    let commandersOOScalc = Math.trunc((500000-array[array.length-1].NO_OF_RAID_COMMANDERS)/ (commanders7dayscalc/7));
     commanders24h.innerHTML = commanders24hcalc;
     commanders7days.innerHTML = commanders7dayscalc; 
+    commandersOOS.innerHTML = commandersOOScalc; 
 
+    // Geologists
+    let geologists24hcalc = array[array.length-1].NO_OF_GEOLOGISTS - array[array.length-2].NO_OF_GEOLOGISTS;
+    let geologists7dayscalc = array[array.length-1].NO_OF_GEOLOGISTS - array[array.length-7].NO_OF_GEOLOGISTS;
+    let geologistsOOScalc = Math.trunc((500000-array[array.length-1].NO_OF_GEOLOGISTS)/ (geologists7dayscalc/7));
+    geologists24h.innerHTML = geologists24hcalc;
+    geologists7days.innerHTML = geologists7dayscalc; 
+    geologistsOOS.innerHTML = geologistsOOScalc; 
 
 
 }

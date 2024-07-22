@@ -2,6 +2,11 @@
 
 
 
+let lastUpdate = document.getElementById("lastUpdate");
+console.log(lastUpdate);
+
+
+
 
 const ctx = document.getElementById('e2data');
 
@@ -45,6 +50,11 @@ function createChart(data,type){
 async function afficherDerniereDataJSON() {
     const reponse = await fetch("./data.json");
     const array = await reponse.json();
+
+    lastUpdate.innerHTML = array[array.length-1].date;
+
+
+
     console.log("Last 24h : ");
     console.log(array[array.length-1].NO_OF_RAID_COMMANDERS - array[array.length-2].NO_OF_RAID_COMMANDERS);
 

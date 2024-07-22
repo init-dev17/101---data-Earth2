@@ -188,6 +188,7 @@ h1{
     display: grid;
     justify-items: center;
 }
+
 .charts h2{
     color: white;
     font-family: "Audiowide";
@@ -198,7 +199,7 @@ h1{
 }
 .charts h3{
     color: white;
-    font-family: "Tecktur";     
+    font-family: "Tektur";     
     font-size: 1rem;
 }
 .charts span{

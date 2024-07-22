@@ -189,6 +189,8 @@ h1{
     justify-items: center;
 }
 
+
+
 .charts h2{
     color: white;
     font-family: "Audiowide";
@@ -219,6 +221,8 @@ display: flex;
 .civs, .cydroids, .jewels{
     background-color: whitesmoke;
     width: 1000px;
+    border-radius: 10px;
+    box-shadow: 7px 7px 5px #578df86a;
 }
 
 

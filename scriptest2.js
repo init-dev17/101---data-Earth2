@@ -11,17 +11,12 @@ function createChart(data,type){
         data:{
             //labels: /*abcisses*/ ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6'],
             labels: data.map(row => row.date),
-            datasets : /*ordonnées*/ [{
-                label: 'Geologists',
-                //data: ['1', '2', '3', '4', '5', '6'], 
-                data: data.map(row => row.NO_OF_GEOLOGISTS),
-                borderColor: 'black',
-            },        
-            {
-                label: 'Commanders',
-                data: data.map(row => row.NO_OF_RAID_COMMANDERS),
+            datasets : /*ordonnées*/ [
+                {
+                label: 'Technicians',
+                data: data.map(row => row.NO_OF_CYDROID_TECHNICIANS),
                 //backgroundColor: '#000000',
-                borderColor: 'rgb(225,57,57)',
+                borderColor: 'green',
             },
             {
                 label: 'Reckoners',
@@ -30,14 +25,46 @@ function createChart(data,type){
                 borderColor: 'blue',
             },
             {
-                label: 'Technicians',
-                data: data.map(row => row.NO_OF_CYDROID_TECHNICIANS),
+                label: 'Commanders',
+                data: data.map(row => row.NO_OF_RAID_COMMANDERS),
                 //backgroundColor: '#000000',
-                borderColor: 'green',
+                borderColor: 'rgb(225,57,57)',
+            },
+            {
+                label: 'Geologists',
+                //data: ['1', '2', '3', '4', '5', '6'], 
+                data: data.map(row => row.NO_OF_GEOLOGISTS),
+                borderColor: 'black',
             }]
         }
     })
 };
+
+// Lire JSON
+// https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch
+async function afficherDerniereDataJSON() {
+    const reponse = await fetch("./data.json");
+    const array = await reponse.json();
+    console.log("Last 24h : ");
+    console.log(array[array.length-1].NO_OF_RAID_COMMANDERS - array[array.length-2].NO_OF_RAID_COMMANDERS);
+
+    console.log("Last 7 days  : ");
+    console.log(array[array.length-1].NO_OF_RAID_COMMANDERS - array[array.length-8].NO_OF_RAID_COMMANDERS);
+
+}
+afficherDerniereDataJSON();
+
+const afficherDerniereDataJSON2 = async () => {
+    const reponse = await fetch("./data.json");
+    const array = await reponse.json();
+    console.log("Since 24h : ");
+    console.log(array[array.length-1].NO_OF_CYDROIDS - array[array.length-2].NO_OF_CYDROIDS);
+}
+afficherDerniereDataJSON2();
+
+
+
+
 
 
 const ctxCydroids = document.getElementById('e2cydroids');

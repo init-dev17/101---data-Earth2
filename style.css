@@ -180,15 +180,28 @@ h1{
     display: grid;
     justify-items: center;
 }
-.charts span{
+.charts h2{
     color: white;
     font-family: "Audiowide";
 
     font-size: 2rem;
     margin: 30px;
-    margin-top: 100px;
+    margin-top: 140px;
 }
+.charts h3{
+    color: white;
+    font-family: "Tecktur";     
+    font-size: 1rem;
+}
+.charts span{
+    color: white;
+    font-family: "Tektur";
+    margin-bottom: 20px;
 
+}
+.civsData{
+display: flex;
+}
 
 
 .civs, .cydroids, .jewels{

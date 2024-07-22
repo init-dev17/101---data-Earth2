@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReadyPlayEarth2</title>
 
+    <link rel="icon" href="./assets/img/41652.png" />
+
+
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -49,17 +52,46 @@
 
 <div class="charts">
 
-  <span>Civilians (max: 500k each)</span>
-  <div class="civs">  
+  <h2>Civilians (max: 500k each)</h2>
+
+  <div class="civsData">
+    <section class="technicians">
+      <h3>Technicians</h3>
+      <span>Last 24h : + </span><br>
+      <span>Last 7 days : + </span>
+    </section>
+    <section class="reckoners">
+      <h3>Reckoners</h3>
+      <span>Last 24h : + </span><br>
+      <span>Last 7 days : + </span>
+    </section>
+    <section class="commanders">
+      <h3>Commanders</h3>
+      <span>Last 24h : + </span><br>
+      <span>Last 7 days : + </span>
+    </section>
+    <section class="geologists">
+      <h3>Geologists</h3>
+      <span>Last 24h : + </span><br>
+      <span>Last 7 days : + </span>
+    </section>
+  </div>
+  
+
+<div class="civs">  
     <canvas id="e2data" aria-label="chart" role="img"></canvas>
   </div>
 
-  <span>Cydroids gen 1(max: 5 millions)</span>
+  <h2>Cydroids gen 1 (max: 5 millions)</h2>
+  <span>Last 24h : + </span>
+  <span>Last 7 days : + </span>
   <div class="cydroids">  
     <canvas id="e2cydroids" aria-label="chart" role="img"></canvas>
   </div>
 
-  <span>Jewels (max: 125+25 millions)</span>
+  <h2>Jewels (max: 125+25 millions)</h2>
+  <span>Last 24h : + </span>
+  <span>Last 7 days : + </span>
   <div class="jewels">  
     <canvas id="e2jewels" aria-label="chart" role="img"></canvas>
   </div>
@@ -76,6 +108,6 @@
 </body>
 
 <script src="scriptest2.js"></script>
-<!-- <script src="dataManipulation.js"></script> -->
+<!--<script src="dataManipulation.js"></script>  -->
 
 </html>

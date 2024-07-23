@@ -62,17 +62,16 @@
       <span>Last 7 days : </span></span><br>
       <span>Out of stock in : </span></span><br>
       <span>Estimated date : </span></span>
-
     </section>
+
     <section id="technicians">
       <h3>Technicians</h3>
       <span>+</span><span id="technicians24h"></span><br>
       <span>+</span><span id="technicians7days"></span><br>
       <span id="techniciansOOS"></span><span> days</span><br>
       <span id="techniciansEstimatedDate"></span>
-
-
     </section>
+
     <section id="reckoners">
       <h3>Reckoners</h3>
       <span>+</span><span id="reckoners24h"></span><br>
@@ -97,22 +96,27 @@
       <span id="geologistsEstimatedDate"></span>
     </section>
   </div>
-  
-
-<div class="civs">  
+  <div class="civs">  
     <canvas id="e2data" aria-label="chart" role="img"></canvas>
   </div>
 
-  <h2>Cydroids gen 1 (max: 5 millions)</h2>
-  <span>Last 24h : + </span>
-  <span>Last 7 days : + </span>
-  <div class="cydroids">  
-    <canvas id="e2cydroids" aria-label="chart" role="img"></canvas>
-  </div>
+  <h2>Cydroids gen1 (max: 5 millions)</h2>
+  <section class="statsSpan">
+    <span>Last 24h : +</span><span id="cydroids24h"></span><br>
+    <span>Last 7 days : +</span><span id="cydroids7days"></span><br>
+  </section>
+    <div class="cydroids">  
+      <canvas id="e2cydroids" aria-label="chart" role="img"></canvas>
+    </div>
+  
 
-  <h2>Jewels (max: 125+25 millions)</h2>
-  <span>Last 24h : + </span>
-  <span>Last 7 days : + </span>
+  <h2>Jewels Tier1 (max: 125+25 millions)</h2>
+  <section class="statsSpan">
+  <span>Last 24h : +</span><span id="jewels24h"></span><br>
+  <span>Last 7 days : +</span><span id="jewels7days"></span><br>
+  <span>Out of stock in : </span><span id="jewelsOOS"></span><span> days</span><br>
+  <span id="jewelsEstimatedDate"></span>
+  </section>
   <div class="jewels">  
     <canvas id="e2jewels" aria-label="chart" role="img"></canvas>
   </div>

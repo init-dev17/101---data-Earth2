@@ -19,6 +19,9 @@ let geologists24h = document.getElementById("geologists24h");
 let geologists7days = document.getElementById("geologists7days");
 let geologistsOOS = document.getElementById("geologistsOOS");
 let geologistsEstimatedDate = document.getElementById("geologistsEstimatedDate");
+let cydroids24h = document.getElementById("cydroids24h");
+let cydroids7days = document.getElementById("cydroids7days");
+
 
 
 // Estimated date civs
@@ -118,6 +121,12 @@ async function afficherDerniereDataJSON() {
     geologists7days.innerHTML = geologists7dayscalc; 
     geologistsOOS.innerHTML = geologistsOOScalc; 
     geologistsEstimatedDate.innerHTML = dateAddDays(geologistsOOScalc, today).toDateString();
+
+    // Cydroids
+    let cydroids24hcalc = array[array.length-1].NO_OF_CYDROIDS - array[array.length-2].NO_OF_CYDROIDS;
+    cydroids24h.innerHTML = cydroids24hcalc;
+    let cydroids7dayscalc = array[array.length-1].NO_OF_CYDROIDS - array[array.length-7].NO_OF_CYDROIDS;    
+    //cydroids7days.innerHTML = cydroids7dayscalc;
 
 
 }

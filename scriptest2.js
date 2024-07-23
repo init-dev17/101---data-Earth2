@@ -22,6 +22,7 @@ let geologistsEstimatedDate = document.getElementById("geologistsEstimatedDate")
 
 
 // Estimated date civs
+// https://www.equinode.com/fonctions-javascript/ajouter-des-jours-a-une-date-avec-javascript
 function dateAddDays(a, b) {
     var d = new Date(b || new Date());
     d.setDate(d.getDate() + a);

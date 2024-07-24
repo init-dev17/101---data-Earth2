@@ -21,6 +21,8 @@ let geologistsOOS = document.getElementById("geologistsOOS");
 let geologistsEstimatedDate = document.getElementById("geologistsEstimatedDate");
 let cydroids24h = document.getElementById("cydroids24h");
 let cydroids7days = document.getElementById("cydroids7days");
+let cydroidsOOS = document.getElementById("cydroidsOOS");
+let cydroidsEstimatedDate = document.getElementById("cydroidsEstimatedDate");
 
 
 
@@ -125,20 +127,24 @@ async function afficherDerniereDataJSON() {
     // Cydroids
     let cydroids24hcalc = array[array.length-1].NO_OF_CYDROIDS - array[array.length-2].NO_OF_CYDROIDS;
     cydroids24h.innerHTML = cydroids24hcalc;
-    let cydroids7dayscalc = array[array.length-1].NO_OF_CYDROIDS - array[array.length-7].NO_OF_CYDROIDS;    
-    //cydroids7days.innerHTML = cydroids7dayscalc;
-
-
+    let cydroids7dayscalc = array[array.length-1].NO_OF_CYDROIDS - array[array.length-7].NO_OF_CYDROIDS;
+    let cydroidsOOScalc = Math.trunc((5000000-array[array.length-1].NO_OF_CYDROIDS)/ (cydroids7dayscalc/7));    
+    cydroids7days.innerHTML = cydroids7dayscalc;
+    cydroidsOOS.innerHTML = cydroidsOOScalc; 
+    cydroidsEstimatedDate.innerHTML = dateAddDays(cydroidsOOScalc, today).toDateString();
 }
+
 afficherDerniereDataJSON();
 
+
+/*
 const afficherDerniereDataJSON2 = async () => {
     const reponse = await fetch("./data.json");
     const array = await reponse.json();
     console.log("Since 24h : ");
     console.log(array[array.length-1].NO_OF_CYDROIDS - array[array.length-2].NO_OF_CYDROIDS);
 }
-afficherDerniereDataJSON2();
+afficherDerniereDataJSON2(); */
 
 
 

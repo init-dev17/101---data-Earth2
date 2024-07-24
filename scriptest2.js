@@ -24,6 +24,10 @@ let cydroids7days = document.getElementById("cydroids7days");
 let cydroidsOOS = document.getElementById("cydroidsOOS");
 let cydroidsEstimatedDate = document.getElementById("cydroidsEstimatedDate");
 
+let jewels24h = document.getElementById("jewels24h");
+let jewels7days = document.getElementById("jewels7days");
+let jewelsOOS = document.getElementById("jewelsOOS");
+let jewelsEstimatedDate = document.getElementById("jewelsEstimatedDate");
 
 
 // Estimated date civs
@@ -126,12 +130,22 @@ async function afficherDerniereDataJSON() {
 
     // Cydroids
     let cydroids24hcalc = array[array.length-1].NO_OF_CYDROIDS - array[array.length-2].NO_OF_CYDROIDS;
-    cydroids24h.innerHTML = cydroids24hcalc;
     let cydroids7dayscalc = array[array.length-1].NO_OF_CYDROIDS - array[array.length-7].NO_OF_CYDROIDS;
-    let cydroidsOOScalc = Math.trunc((5000000-array[array.length-1].NO_OF_CYDROIDS)/ (cydroids7dayscalc/7));    
+    let cydroidsOOScalc = Math.trunc((5000000-array[array.length-1].NO_OF_CYDROIDS)/ (cydroids7dayscalc/7));
+    cydroids24h.innerHTML = cydroids24hcalc;    
     cydroids7days.innerHTML = cydroids7dayscalc;
     cydroidsOOS.innerHTML = cydroidsOOScalc; 
     cydroidsEstimatedDate.innerHTML = dateAddDays(cydroidsOOScalc, today).toDateString();
+
+    // Jewels
+    let jewels24hcalc = array[array.length-1].TOTAL_TIER_1_JEWELS_MINED - array[array.length-2].TOTAL_TIER_1_JEWELS_MINED;
+    let jewels7dayscalc = array[array.length-1].TOTAL_TIER_1_JEWELS_MINED - array[array.length-7].TOTAL_TIER_1_JEWELS_MINED;
+    let jewelsOOScalc = Math.trunc((125000000-array[array.length-1].TOTAL_TIER_1_JEWELS_MINED)/ (jewels7dayscalc/7));
+    jewels24h.innerHTML = jewels24hcalc;
+    jewels7days.innerHTML = jewels7dayscalc;
+    jewelsOOS.innerHTML = jewelsOOScalc; 
+    jewelsEstimatedDate.innerHTML = dateAddDays(jewelsOOScalc, today).toDateString();
+
 }
 
 afficherDerniereDataJSON();

@@ -220,7 +220,8 @@ display: flex;
 
 .civs, .cydroids, .jewels{
     background-color: whitesmoke;
-    width: 1000px;
+    width: 90%;
+    max-width: 1000px;
     border-radius: 10px;
     box-shadow: 7px 7px 5px #578df86a;
 }
@@ -257,6 +258,6 @@ footer a{
      }
      #CODE{
          height: 46px;    
-     }
+     }  
 }
 

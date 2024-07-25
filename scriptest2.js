@@ -46,7 +46,7 @@ let dansXjours = 60;
 
 const ctx = document.getElementById('e2data');
 
-function createChart(data,type){
+function createChartCivilians(data,type){
     new Chart(ctx, {
         type: type,
         data:{
@@ -57,25 +57,29 @@ function createChart(data,type){
                 label: 'Technicians',
                 data: data.map(row => row.NO_OF_CYDROID_TECHNICIANS),
                 //backgroundColor: '#000000',
-                borderColor: 'green',
+                borderColor: 'darkgreen',
+                backgroundColor: 'darkgreen',
             },
             {
                 label: 'Reckoners',
                 data: data.map(row => row.NO_OF_ETHER_RECKONERS),
                 //backgroundColor: '#000000',
                 borderColor: 'blue',
+                backgroundColor: 'blue',
             },
             {
                 label: 'Commanders',
                 data: data.map(row => row.NO_OF_RAID_COMMANDERS),
                 //backgroundColor: '#000000',
-                borderColor: 'rgb(225,57,57)',
+                borderColor: 'rgb(254,0,76)',
+                backgroundColor: 'rgb(254,0,76)',
             },
             {
                 label: 'Geologists',
                 //data: ['1', '2', '3', '4', '5', '6'], 
                 data: data.map(row => row.NO_OF_GEOLOGISTS),
-                borderColor: 'black',
+                borderColor: 'whitesmoke',
+                backgroundColor: 'whitesmoke',
             }]
         }
     })
@@ -166,7 +170,7 @@ afficherDerniereDataJSON2(); */
 
 
 const ctxCydroids = document.getElementById('e2cydroids');
-function createChart2(data2,type2){
+function createChartCydroids(data2,type2){
     new Chart(ctxCydroids, {
         type: type2,
         data:{
@@ -175,15 +179,26 @@ function createChart2(data2,type2){
                 label: 'Cydroids',
                 //data: ['1', '2', '3', '4', '5', '6'], 
                 data: data2.map(row => row.NO_OF_CYDROIDS),
-                borderColor: 'black',
+                borderColor: 'whitesmoke',
+                backgroundColor: 'whitesmoke',
+
             }]
         }
+        /*options: {
+            legend: {
+                labels:{
+                    fontColor: 'white';
+                }
+            }
+        }*/
     })
 };
 
 
+
+
 const ctxJewels = document.getElementById('e2jewels');
-function createChart3(data3,type3){
+function createChartJewels(data3,type3){
     new Chart(ctxJewels, {
         type: type3,
         data:{
@@ -192,7 +207,7 @@ function createChart3(data3,type3){
                 label: 'Total T1 mined',
                 //data: ['1', '2', '3', '4', '5', '6'], 
                 data: data3.map(row => row.TOTAL_TIER_1_JEWELS_MINED),
-                borderColor: 'black',
+                borderColor: 'whitesmoke',
             },        
             {
                 label: 'Total in circulation',
@@ -223,6 +238,32 @@ function createChart3(data3,type3){
 };
 
 
+const ctxEssence = document.getElementById('e2essence');
+function createChartEssence(data4,type4){
+    new Chart(ctxEssence, {
+        type: type4,
+        data:{
+            labels: ["04/2024", "06/2024"],
+            datasets : /*ordonnées*/ [{
+                label: 'Essence',
+                //data: ['1', '2', '3', '4', '5', '6'], 
+                data: [188000000, 300000000],
+                borderColor: 'rgb(81,226,195)',
+                backgroundColor: 'rgb(81,226,195)',
+
+            }]
+        }
+        /*options: {
+            legend: {
+                labels:{
+                    fontColor: 'white';
+                }
+            }
+        }*/
+    })
+};
+
+
 
 
 
@@ -236,9 +277,10 @@ fetch('data.json')
     }
 })
 .then(function(data){
-    createChart(data, 'line')
-    createChart2(data, 'line')
-    createChart3(data, 'line')
+    createChartCivilians(data, 'line')
+    createChartCydroids(data, 'line')
+    createChartJewels(data, 'line')
+    createChartEssence(data, 'line')
     }
 );
 // Traitement des données

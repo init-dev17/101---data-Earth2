@@ -1,52 +1,53 @@
-
+//robots.txt
+// https://earth2.io/robots.txt
 
 let scrap = `Metrics
 NUMBER OF JEWELS CIRCULATING
-46,599,957
+46,669,473
 TOTAL TIER 1 JEWELS CIRCULATION
-42,213,282
+42,281,386
 TOTAL TIER 2 JEWELS CIRCULATION
-1,705,608
+1,705,592
 TOTAL TIER 3 JEWELS CIRCULATION
-2,681,067
+2,682,495
 TOTAL TIER 1 JEWELS MINED
-79,470,058
+79,571,474
 NUMBER OF JEWEL MENTAR SLOTS
-27,581,771
+27,586,596
 TOTAL NO. OF TILES PURCHASED
-123,489,055
+123,498,821
 NO. OF T1 TILES PURCHASED
-67,183,268
+67,185,036
 NO. OF T2 TILES PURCHASED
-49,321,201
+49,326,416
 NO. OF T3 TILES PURCHASED
-6,984,586
+6,987,369
 MAX SUPPLY (MINUS BURNT TOKENS)
-986,742,398
+984,421,148
 MINTED TOKENS
 311,145,376
 BURNT TOKENS
-13,257,602
+15,578,852
 E-THER COLLECTED PAST 24 HOURS
-1,734,491
+1,698,989
 BIDS MADE TOTAL
-2,087,695
+2,088,421
 BIDS REJECTED TOTAL
-369,407
+369,509
 TOTAL HOLOBUILDINGS BUILT
-1,206,864
+1,207,584
 NO. OF CYDROIDS
-2,537,899
+2,539,148
 NO. OF CIVILIANS
-1,592,356
+1,594,671
 NO. OF RAID COMMANDERS
-428,998
+429,651
 NO. OF E-THER RECKONERS
-433,172
+433,904
 NO. OF CYDROID TECHNICIANS
-445,106
+445,787
 NO. OF GEOLOGISTS
-285,080`
+285,329`
 
 //console.log(scrap);
 
@@ -129,8 +130,29 @@ console.log(dailyDataJSON);
 
 // Uploader les données dans data.json
 
+// Scraper 
+// https://medium.com/data-scraper-tips-tricks/scraping-data-with-javascript-in-3-minutes-8a7cf8275b31
 
 
 
+/*
+// Récupérer les données Metrics sur https://earth2.io/
+
+// Récupérer la page Web
 
 
+
+// Récupérer texte des h4 et h1 dans Classe MetricsItemHome_metricsItem__3cAcN
+// index, h4 dans la class : MetricsItemHome_metricsItemTitle__1NSo5
+// valeur, H1 dans la class : MetricsItemHome_metricsItemNumber__MsJYw
+// afficher le texte dans les classes
+let itemStat = pageWeb.querySelectorAll(".MetricsItemHome_metricsItem__3cAcN");
+let index = pageWeb.querySelectorAll(".MetricsItemHome_metricsItemTitle__1NSo5");
+let valeur = pageWeb.querySelectorAll(".MetricsItemHome_metricsItemNumber__MsJYw");
+console.log(itemStat);
+console.log(index.textContent);
+console.log(valeur.innerText);
+console.log(index.innerHTML);
+*/
+
+// document.execCommand('SaveAs',true,'.html');

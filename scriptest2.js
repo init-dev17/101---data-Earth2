@@ -57,8 +57,8 @@ function createChartCivilians(data,type){
                 label: 'Technicians',
                 data: data.map(row => row.NO_OF_CYDROID_TECHNICIANS),
                 //backgroundColor: '#000000',
-                borderColor: 'darkgreen',
-                backgroundColor: 'darkgreen',
+                borderColor: '#2DFC55',
+                backgroundColor: '#2DFC55',
             },
             {
                 label: 'Reckoners',
@@ -256,7 +256,7 @@ function createChartEssence(data4,type4){
         /*options: {
             legend: {
                 labels:{
-                    fontColor: 'white';
+                    fontColor: 'white',
                 }
             }
         }*/

@@ -253,7 +253,8 @@ function createChartEssence(data4,type4){
 
             }]
         }
-        /*options: {
+        /*,
+        options: {
             legend: {
                 labels:{
                     fontColor: 'white',

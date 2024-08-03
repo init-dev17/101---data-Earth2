@@ -1,12 +1,10 @@
-
-
-
-
 let lastUpdate = document.getElementById("lastUpdate");
 let technicians24h = document.getElementById("technicians24h");
 let technicians7days = document.getElementById("technicians7days");
 let techniciansOOS = document.getElementById("techniciansOOS");
-let techniciansEstimatedDate = document.getElementById("techniciansEstimatedDate");
+let techniciansEstimatedDate = document.getElementById(
+  "techniciansEstimatedDate"
+);
 let reckoners24h = document.getElementById("reckoners24h");
 let reckoners7days = document.getElementById("reckoners7days");
 let reckonersOOS = document.getElementById("reckonersOOS");
@@ -14,11 +12,15 @@ let reckonersEstimatedDate = document.getElementById("reckonersEstimatedDate");
 let commanders24h = document.getElementById("commanders24h");
 let commanders7days = document.getElementById("commanders7days");
 let commandersOOS = document.getElementById("commandersOOS");
-let commandersEstimatedDate = document.getElementById("commandersEstimatedDate");
+let commandersEstimatedDate = document.getElementById(
+  "commandersEstimatedDate"
+);
 let geologists24h = document.getElementById("geologists24h");
 let geologists7days = document.getElementById("geologists7days");
 let geologistsOOS = document.getElementById("geologistsOOS");
-let geologistsEstimatedDate = document.getElementById("geologistsEstimatedDate");
+let geologistsEstimatedDate = document.getElementById(
+  "geologistsEstimatedDate"
+);
 let cydroids24h = document.getElementById("cydroids24h");
 let cydroids7days = document.getElementById("cydroids7days");
 let cydroidsOOS = document.getElementById("cydroidsOOS");
@@ -29,13 +31,12 @@ let jewels7days = document.getElementById("jewels7days");
 let jewelsOOS = document.getElementById("jewelsOOS");
 let jewelsEstimatedDate = document.getElementById("jewelsEstimatedDate");
 
-
 // Estimated date civs
 // https://www.equinode.com/fonctions-javascript/ajouter-des-jours-a-une-date-avec-javascript
 function dateAddDays(a, b) {
-    var d = new Date(b || new Date());
-    d.setDate(d.getDate() + a);
-    return d;
+  var d = new Date(b || new Date());
+  d.setDate(d.getDate() + a);
+  return d;
 }
 let today = new Date();
 let dansXjours = 60;
@@ -43,117 +44,168 @@ let dansXjours = 60;
 // Format date avec .toDateString()
 // https://www.geeksforgeeks.org/how-to-format-a-date-in-javascript/
 
+const ctx = document.getElementById("e2data");
 
-const ctx = document.getElementById('e2data');
-
-function createChartCivilians(data,type){
-    new Chart(ctx, {
-        type: type,
-        data:{
-            //labels: /*abcisses*/ ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6'],
-            labels: data.map(row => row.date),
-            datasets : /*ordonnées*/ [
-                {
-                label: 'Technicians',
-                data: data.map(row => row.NO_OF_CYDROID_TECHNICIANS),
-                //backgroundColor: '#000000',
-                borderColor: '#2DFC55',
-                backgroundColor: '#2DFC55',
-            },
-            {
-                label: 'Reckoners',
-                data: data.map(row => row.NO_OF_ETHER_RECKONERS),
-                //backgroundColor: '#000000',
-                borderColor: 'blue',
-                backgroundColor: 'blue',
-            },
-            {
-                label: 'Commanders',
-                data: data.map(row => row.NO_OF_RAID_COMMANDERS),
-                //backgroundColor: '#000000',
-                borderColor: 'rgb(254,0,76)',
-                backgroundColor: 'rgb(254,0,76)',
-            },
-            {
-                label: 'Geologists',
-                //data: ['1', '2', '3', '4', '5', '6'], 
-                data: data.map(row => row.NO_OF_GEOLOGISTS),
-                borderColor: 'whitesmoke',
-                backgroundColor: 'whitesmoke',
-            }]
-        }
-    })
-};
+function createChartCivilians(data, type) {
+  new Chart(ctx, {
+    type: type,
+    data: {
+      //labels: /*abcisses*/ ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6'],
+      labels: data.map((row) => row.date),
+      datasets: /*ordonnées*/ [
+        {
+          label: "Technicians",
+          data: data.map((row) => row.NO_OF_CYDROID_TECHNICIANS),
+          //backgroundColor: '#000000',
+          borderColor: "#2DFC55",
+          backgroundColor: "#2DFC55",
+        },
+        {
+          label: "Reckoners",
+          data: data.map((row) => row.NO_OF_ETHER_RECKONERS),
+          //backgroundColor: '#000000',
+          borderColor: "blue",
+          backgroundColor: "blue",
+        },
+        {
+          label: "Commanders",
+          data: data.map((row) => row.NO_OF_RAID_COMMANDERS),
+          //backgroundColor: '#000000',
+          borderColor: "rgb(254,0,76)",
+          backgroundColor: "rgb(254,0,76)",
+        },
+        {
+          label: "Geologists",
+          //data: ['1', '2', '3', '4', '5', '6'],
+          data: data.map((row) => row.NO_OF_GEOLOGISTS),
+          borderColor: "whitesmoke",
+          backgroundColor: "whitesmoke",
+        },
+      ],
+    },
+  });
+}
 
 // Lire JSON
 // https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch
 async function afficherDerniereDataJSON() {
-    const reponse = await fetch("./data.json");
-    const array = await reponse.json();
+  const reponse = await fetch("./data.json");
+  const array = await reponse.json();
 
-    lastUpdate.innerHTML = array[array.length-1].date;
+  lastUpdate.innerHTML = array[array.length - 1].date;
 
-    // Technicians
-    let technicians24hcalc = array[array.length-1].NO_OF_CYDROID_TECHNICIANS - array[array.length-2].NO_OF_CYDROID_TECHNICIANS;
-    let technicians7dayscalc = array[array.length-1].NO_OF_CYDROID_TECHNICIANS - array[array.length-7
-    ].NO_OF_CYDROID_TECHNICIANS;
-    let techniciansOOScalc = Math.trunc((500000-array[array.length-1].NO_OF_CYDROID_TECHNICIANS)/ (technicians7dayscalc/7));
-    technicians24h.innerHTML = technicians24hcalc;
-    technicians7days.innerHTML = technicians7dayscalc; 
-    techniciansOOS.innerHTML = techniciansOOScalc; 
-    techniciansEstimatedDate.innerHTML = dateAddDays(techniciansOOScalc, today).toDateString();
+  // Technicians
+  let technicians24hcalc =
+    array[array.length - 1].NO_OF_CYDROID_TECHNICIANS -
+    array[array.length - 2].NO_OF_CYDROID_TECHNICIANS;
+  let technicians7dayscalc =
+    array[array.length - 1].NO_OF_CYDROID_TECHNICIANS -
+    array[array.length - 7].NO_OF_CYDROID_TECHNICIANS;
+  let techniciansOOScalc = Math.trunc(
+    (500000 - array[array.length - 1].NO_OF_CYDROID_TECHNICIANS) /
+      (technicians7dayscalc / 7)
+  );
+  technicians24h.innerHTML = technicians24hcalc;
+  technicians7days.innerHTML = technicians7dayscalc;
+  techniciansOOS.innerHTML = techniciansOOScalc;
+  techniciansEstimatedDate.innerHTML = dateAddDays(
+    techniciansOOScalc,
+    today
+  ).toDateString();
 
+  // Reckoners
+  let reckoners24hcalc =
+    array[array.length - 1].NO_OF_ETHER_RECKONERS -
+    array[array.length - 2].NO_OF_ETHER_RECKONERS;
+  let reckoners7dayscalc =
+    array[array.length - 1].NO_OF_ETHER_RECKONERS -
+    array[array.length - 7].NO_OF_ETHER_RECKONERS;
+  let reckonersOOScalc = Math.trunc(
+    (500000 - array[array.length - 1].NO_OF_ETHER_RECKONERS) /
+      (reckoners7dayscalc / 7)
+  );
+  reckoners24h.innerHTML = reckoners24hcalc;
+  reckoners7days.innerHTML = reckoners7dayscalc;
+  reckonersOOS.innerHTML = reckonersOOScalc;
+  reckonersEstimatedDate.innerHTML = dateAddDays(
+    reckonersOOScalc,
+    today
+  ).toDateString();
 
-    // Reckoners
-    let reckoners24hcalc = array[array.length-1].NO_OF_ETHER_RECKONERS - array[array.length-2].NO_OF_ETHER_RECKONERS;
-    let reckoners7dayscalc = array[array.length-1].NO_OF_ETHER_RECKONERS - array[array.length-7
-    ].NO_OF_ETHER_RECKONERS;
-    let reckonersOOScalc = Math.trunc((500000-array[array.length-1].NO_OF_ETHER_RECKONERS)/ (reckoners7dayscalc/7));
-    reckoners24h.innerHTML = reckoners24hcalc;
-    reckoners7days.innerHTML = reckoners7dayscalc; 
-    reckonersOOS.innerHTML = reckonersOOScalc;
-    reckonersEstimatedDate.innerHTML = dateAddDays(reckonersOOScalc, today).toDateString();
+  // Commanders
+  let commanders24hcalc =
+    array[array.length - 1].NO_OF_RAID_COMMANDERS -
+    array[array.length - 2].NO_OF_RAID_COMMANDERS;
+  let commanders7dayscalc =
+    array[array.length - 1].NO_OF_RAID_COMMANDERS -
+    array[array.length - 7].NO_OF_RAID_COMMANDERS;
+  let commandersOOScalc = Math.trunc(
+    (500000 - array[array.length - 1].NO_OF_RAID_COMMANDERS) /
+      (commanders7dayscalc / 7)
+  );
+  commanders24h.innerHTML = commanders24hcalc;
+  commanders7days.innerHTML = commanders7dayscalc;
+  commandersOOS.innerHTML = commandersOOScalc;
+  commandersEstimatedDate.innerHTML = dateAddDays(
+    commandersOOScalc,
+    today
+  ).toDateString();
 
-    // Commanders
-    let commanders24hcalc = array[array.length-1].NO_OF_RAID_COMMANDERS - array[array.length-2].NO_OF_RAID_COMMANDERS;
-    let commanders7dayscalc = array[array.length-1].NO_OF_RAID_COMMANDERS - array[array.length-7].NO_OF_RAID_COMMANDERS;
-    let commandersOOScalc = Math.trunc((500000-array[array.length-1].NO_OF_RAID_COMMANDERS)/ (commanders7dayscalc/7));
-    commanders24h.innerHTML = commanders24hcalc;
-    commanders7days.innerHTML = commanders7dayscalc; 
-    commandersOOS.innerHTML = commandersOOScalc; 
-    commandersEstimatedDate.innerHTML = dateAddDays(commandersOOScalc, today).toDateString();
+  // Geologists
+  let geologists24hcalc =
+    array[array.length - 1].NO_OF_GEOLOGISTS -
+    array[array.length - 2].NO_OF_GEOLOGISTS;
+  let geologists7dayscalc =
+    array[array.length - 1].NO_OF_GEOLOGISTS -
+    array[array.length - 7].NO_OF_GEOLOGISTS;
+  let geologistsOOScalc = Math.trunc(
+    (500000 - array[array.length - 1].NO_OF_GEOLOGISTS) /
+      (geologists7dayscalc / 7)
+  );
+  geologists24h.innerHTML = geologists24hcalc;
+  geologists7days.innerHTML = geologists7dayscalc;
+  //    geologistsOOS.innerHTML = geologistsOOScalc;
+  //       geologistsEstimatedDate.innerHTML = dateAddDays(geologistsOOScalc, today).toDateString();
 
-    // Geologists
-    let geologists24hcalc = array[array.length-1].NO_OF_GEOLOGISTS - array[array.length-2].NO_OF_GEOLOGISTS;
-    let geologists7dayscalc = array[array.length-1].NO_OF_GEOLOGISTS - array[array.length-7].NO_OF_GEOLOGISTS;
-    let geologistsOOScalc = Math.trunc((500000-array[array.length-1].NO_OF_GEOLOGISTS)/ (geologists7dayscalc/7));
-    geologists24h.innerHTML = geologists24hcalc;
-    geologists7days.innerHTML = geologists7dayscalc; 
-    geologistsOOS.innerHTML = geologistsOOScalc; 
-    geologistsEstimatedDate.innerHTML = dateAddDays(geologistsOOScalc, today).toDateString();
+  // Cydroids
+  let cydroids24hcalc =
+    array[array.length - 1].NO_OF_CYDROIDS -
+    array[array.length - 2].NO_OF_CYDROIDS;
+  let cydroids7dayscalc =
+    array[array.length - 1].NO_OF_CYDROIDS -
+    array[array.length - 7].NO_OF_CYDROIDS;
+  let cydroidsOOScalc = Math.trunc(
+    (5000000 - array[array.length - 1].NO_OF_CYDROIDS) / (cydroids7dayscalc / 7)
+  );
+  cydroids24h.innerHTML = cydroids24hcalc;
+  cydroids7days.innerHTML = cydroids7dayscalc;
+  cydroidsOOS.innerHTML = cydroidsOOScalc;
+  cydroidsEstimatedDate.innerHTML = dateAddDays(
+    cydroidsOOScalc,
+    today
+  ).toDateString();
 
-    // Cydroids
-    let cydroids24hcalc = array[array.length-1].NO_OF_CYDROIDS - array[array.length-2].NO_OF_CYDROIDS;
-    let cydroids7dayscalc = array[array.length-1].NO_OF_CYDROIDS - array[array.length-7].NO_OF_CYDROIDS;
-    let cydroidsOOScalc = Math.trunc((5000000-array[array.length-1].NO_OF_CYDROIDS)/ (cydroids7dayscalc/7));
-    cydroids24h.innerHTML = cydroids24hcalc;    
-    cydroids7days.innerHTML = cydroids7dayscalc;
-    cydroidsOOS.innerHTML = cydroidsOOScalc; 
-    cydroidsEstimatedDate.innerHTML = dateAddDays(cydroidsOOScalc, today).toDateString();
-
-    // Jewels
-    let jewels24hcalc = array[array.length-1].TOTAL_TIER_1_JEWELS_MINED - array[array.length-2].TOTAL_TIER_1_JEWELS_MINED;
-    let jewels7dayscalc = array[array.length-1].TOTAL_TIER_1_JEWELS_MINED - array[array.length-7].TOTAL_TIER_1_JEWELS_MINED;
-    let jewelsOOScalc = Math.trunc((125000000-array[array.length-1].TOTAL_TIER_1_JEWELS_MINED)/ (jewels7dayscalc/7));
-    jewels24h.innerHTML = jewels24hcalc;
-    jewels7days.innerHTML = jewels7dayscalc;
-    jewelsOOS.innerHTML = jewelsOOScalc; 
-    jewelsEstimatedDate.innerHTML = dateAddDays(jewelsOOScalc, today).toDateString();
-
+  // Jewels
+  let jewels24hcalc =
+    array[array.length - 1].TOTAL_TIER_1_JEWELS_MINED -
+    array[array.length - 2].TOTAL_TIER_1_JEWELS_MINED;
+  let jewels7dayscalc =
+    array[array.length - 1].TOTAL_TIER_1_JEWELS_MINED -
+    array[array.length - 7].TOTAL_TIER_1_JEWELS_MINED;
+  let jewelsOOScalc = Math.trunc(
+    (125000000 - array[array.length - 1].TOTAL_TIER_1_JEWELS_MINED) /
+      (jewels7dayscalc / 7)
+  );
+  jewels24h.innerHTML = jewels24hcalc;
+  jewels7days.innerHTML = jewels7dayscalc;
+  jewelsOOS.innerHTML = jewelsOOScalc;
+  jewelsEstimatedDate.innerHTML = dateAddDays(
+    jewelsOOScalc,
+    today
+  ).toDateString();
 }
 
 afficherDerniereDataJSON();
-
 
 /*
 const afficherDerniereDataJSON2 = async () => {
@@ -164,96 +216,91 @@ const afficherDerniereDataJSON2 = async () => {
 }
 afficherDerniereDataJSON2(); */
 
-
-
-
-
-
-const ctxCydroids = document.getElementById('e2cydroids');
-function createChartCydroids(data2,type2){
-    new Chart(ctxCydroids, {
-        type: type2,
-        data:{
-            labels: data2.map(row => row.date),
-            datasets : /*ordonnées*/ [{
-                label: 'Cydroids',
-                //data: ['1', '2', '3', '4', '5', '6'], 
-                data: data2.map(row => row.NO_OF_CYDROIDS),
-                borderColor: 'whitesmoke',
-                backgroundColor: 'whitesmoke',
-
-            }]
-        }
-        /*options: {
+const ctxCydroids = document.getElementById("e2cydroids");
+function createChartCydroids(data2, type2) {
+  new Chart(ctxCydroids, {
+    type: type2,
+    data: {
+      labels: data2.map((row) => row.date),
+      datasets: /*ordonnées*/ [
+        {
+          label: "Cydroids",
+          //data: ['1', '2', '3', '4', '5', '6'],
+          data: data2.map((row) => row.NO_OF_CYDROIDS),
+          borderColor: "whitesmoke",
+          backgroundColor: "whitesmoke",
+        },
+      ],
+    },
+    /*options: {
             legend: {
                 labels:{
                     fontColor: 'white';
                 }
             }
         }*/
-    })
-};
+  });
+}
 
+const ctxJewels = document.getElementById("e2jewels");
+function createChartJewels(data3, type3) {
+  new Chart(ctxJewels, {
+    type: type3,
+    data: {
+      labels: data3.map((row) => row.date),
+      datasets: /*ordonnées*/ [
+        {
+          label: "Total T1 mined",
+          //data: ['1', '2', '3', '4', '5', '6'],
+          data: data3.map((row) => row.TOTAL_TIER_1_JEWELS_MINED),
+          borderColor: "whitesmoke",
+        },
+        {
+          label: "Total in circulation",
+          data: data3.map((row) => row.NUMBER_OF_JEWELS_CIRCULATING),
+          //backgroundColor: '#000000',
+          borderColor: "rgb(225,57,57)",
+        },
+        {
+          label: "Total T1 in circulation",
+          data: data3.map((row) => row.TOTAL_TIER_1_JEWELS_CIRCULATION),
+          //backgroundColor: '#000000',
+          borderColor: "violet",
+        },
+        {
+          label: "Total T2 in circulation",
+          data: data3.map((row) => row.TOTAL_TIER_2_JEWELS_CIRCULATION),
+          //backgroundColor: '#000000',
+          borderColor: "blue",
+        },
+        {
+          label: "Total T3 in circulation",
+          data: data3.map((row) => row.TOTAL_TIER_3_JEWELS_CIRCULATION),
+          //backgroundColor: '#000000',
+          borderColor: "cyan",
+        },
+      ],
+    },
+  });
+}
 
-
-
-const ctxJewels = document.getElementById('e2jewels');
-function createChartJewels(data3,type3){
-    new Chart(ctxJewels, {
-        type: type3,
-        data:{
-            labels: data3.map(row => row.date),
-            datasets : /*ordonnées*/ [{
-                label: 'Total T1 mined',
-                //data: ['1', '2', '3', '4', '5', '6'], 
-                data: data3.map(row => row.TOTAL_TIER_1_JEWELS_MINED),
-                borderColor: 'whitesmoke',
-            },        
-            {
-                label: 'Total in circulation',
-                data: data3.map(row => row.NUMBER_OF_JEWELS_CIRCULATING),
-                //backgroundColor: '#000000',
-                borderColor: 'rgb(225,57,57)',
-            },        
-            {
-                label: 'Total T1 in circulation',
-                data: data3.map(row => row.TOTAL_TIER_1_JEWELS_CIRCULATION),
-                //backgroundColor: '#000000',
-                borderColor: 'violet',
-            },        
-            {
-                label: 'Total T2 in circulation',
-                data: data3.map(row => row.TOTAL_TIER_2_JEWELS_CIRCULATION),
-                //backgroundColor: '#000000',
-                borderColor: 'blue',
-            },        
-            {
-                label: 'Total T3 in circulation',
-                data: data3.map(row => row.TOTAL_TIER_3_JEWELS_CIRCULATION),
-                //backgroundColor: '#000000',
-                borderColor: 'cyan',
-            }]
-        }
-    })
-};
-
-
-const ctxEssence = document.getElementById('e2essence');
-function createChartEssence(data4,type4){
-    new Chart(ctxEssence, {
-        type: type4,
-        data:{
-            labels: ["04/2024", "06/2024"],
-            datasets : /*ordonnées*/ [{
-                label: 'Essence',
-                //data: ['1', '2', '3', '4', '5', '6'], 
-                data: [188000000, 300000000],
-                borderColor: 'rgb(81,226,195)',
-                backgroundColor: 'rgb(81,226,195)',
-
-            }]
-        }
-        /*,
+const ctxEssence = document.getElementById("e2essence");
+function createChartEssence(data4, type4) {
+  new Chart(ctxEssence, {
+    type: type4,
+    data: {
+      labels: ["04/2024", "06/2024"],
+      datasets: /*ordonnées*/ [
+        {
+          label: "Essence",
+          //data: ['1', '2', '3', '4', '5', '6'],
+          data: [188000000, 300000000],
+          borderColor: "rgb(81,226,195)",
+          backgroundColor: "rgb(81,226,195)",
+        },
+      ],
+    },
+    /*,
         options: {
             legend: {
                 labels:{
@@ -261,36 +308,25 @@ function createChartEssence(data4,type4){
                 }
             }
         }*/
-    })
-};
-
-
-
-
-
-
+  });
+}
 
 // Chercher les données dans le JSON et appel de la fonction createChart
-fetch('data.json')
-.then(function(response){
-    if(response.ok == true){
-        return response.json()
+fetch("data.json")
+  .then(function (response) {
+    if (response.ok == true) {
+      return response.json();
     }
-})
-.then(function(data){
-    createChartCivilians(data, 'line')
-    createChartCydroids(data, 'line')
-    createChartJewels(data, 'line')
-    createChartEssence(data, 'line')
-    }
-);
+  })
+  .then(function (data) {
+    createChartCivilians(data, "line");
+    createChartCydroids(data, "line");
+    createChartJewels(data, "line");
+    createChartEssence(data, "line");
+  });
 // Traitement des données
 // supprimer les . et remplacer " " par "_" dans les index
-// supprimer les , dans les données 
-
-
-
-
+// supprimer les , dans les données
 
 /*15/07-   571k 3 días
 
@@ -330,8 +366,3 @@ fetch('data.json')
 04/06 -  3.4 M
 
 */
-
-
-
-
-

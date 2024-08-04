@@ -31,6 +31,17 @@ let jewels7days = document.getElementById("jewels7days");
 let jewelsOOS = document.getElementById("jewelsOOS");
 let jewelsEstimatedDate = document.getElementById("jewelsEstimatedDate");
 
+/* 
+//New feature : Ether Collected
+let etherCollected24h = document.getElementById("etherCollected24h");
+let etherCollected7days = document.getElementById("etherCollected7days");
+
+
+// New feature : Total Ether spend to create civilians
+let etherSpendToCivilians24h = document.getElementById("etherSpendToCivilians24h");
+let etherUnspend = document.getElementById("etherUnspend24h");
+*/
+
 // Estimated date civs
 // https://www.equinode.com/fonctions-javascript/ajouter-des-jours-a-une-date-avec-javascript
 function dateAddDays(a, b) {

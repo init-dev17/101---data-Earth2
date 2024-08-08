@@ -38,22 +38,13 @@ let jewelsEstimatedDate = document.getElementById("jewelsEstimatedDate");
 let etherCollected24h = document.getElementById("etherCollected24h");
 let etherCollected7days = document.getElementById("etherCollected7days");
 
-
 // New feature : Daily Ether spend to create civilians
 let etherSpendToCivilians24h = document.getElementById("etherSpendToCivilians24h");
 let etherUnspend = document.getElementById("etherUnspend24h");
 
 // New feature : Daily Essence potentially generated
-// (Ether collected *6,5 /100) - Ether dépensé en création de civilians
 let essenceGenerated24h = document.getElementById("essenceGenerated24h");
 let essenceGenerated7days = document.getElementById("essenceGenerated7days");
-
-technicians24h * 25 ether
-reckoners24h * 25 ether
-commanders24h * 25 ether
-geologists24h *10 ether
-
-
 */
 
 // Estimated date civs
@@ -228,7 +219,22 @@ async function afficherDerniereDataJSON() {
     jewelsOOScalc,
     today
   ).toDateString();
+
+
+
+ 
+// New feature : Daily Ether Collected
+// New feature : Daily Essence potentially generated
+
+// New feature : Daily Ether spend to create civilians
+//let etherSpend = (technicians24hcalc + reckoners24hcalc + commanders24hcalc)*25 + (geologists24hcalc * 10);
+//console.log("Total : " + etherSpend + " Ether");
+
+
 }
+
+
+
 
 afficherDerniereDataJSON();
 

@@ -1,4 +1,5 @@
 let lastUpdate = document.getElementById("lastUpdate");
+
 let technicians24h = document.getElementById("technicians24h");
 let technicians7days = document.getElementById("technicians7days");
 let techniciansOOS = document.getElementById("techniciansOOS");
@@ -9,6 +10,7 @@ let reckoners24h = document.getElementById("reckoners24h");
 let reckoners7days = document.getElementById("reckoners7days");
 let reckonersOOS = document.getElementById("reckonersOOS");
 let reckonersEstimatedDate = document.getElementById("reckonersEstimatedDate");
+
 let commanders24h = document.getElementById("commanders24h");
 let commanders7days = document.getElementById("commanders7days");
 let commandersOOS = document.getElementById("commandersOOS");
@@ -32,14 +34,26 @@ let jewelsOOS = document.getElementById("jewelsOOS");
 let jewelsEstimatedDate = document.getElementById("jewelsEstimatedDate");
 
 /* 
-//New feature : Ether Collected
+//New feature : Daily Ether Collected
 let etherCollected24h = document.getElementById("etherCollected24h");
 let etherCollected7days = document.getElementById("etherCollected7days");
 
 
-// New feature : Total Ether spend to create civilians
+// New feature : Daily Ether spend to create civilians
 let etherSpendToCivilians24h = document.getElementById("etherSpendToCivilians24h");
 let etherUnspend = document.getElementById("etherUnspend24h");
+
+// New feature : Daily Essence potentially generated
+// (Ether collected *6,5 /100) - Ether dépensé en création de civilians
+let essenceGenerated24h = document.getElementById("essenceGenerated24h");
+let essenceGenerated7days = document.getElementById("essenceGenerated7days");
+
+technicians24h * 25 ether
+reckoners24h * 25 ether
+commanders24h * 25 ether
+geologists24h *10 ether
+
+
 */
 
 // Estimated date civs

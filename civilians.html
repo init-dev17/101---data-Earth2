@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Civlians</title>
+    <title>Civilians - ReadyPlayEarth2</title>
+
+    <link rel="icon" href="./assets/img/41652.png" />
 
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 
@@ -18,16 +19,77 @@
           <li><a href="/civilians.html">Civilians</a></li>
           <li><a href="/jewels.html">Jewels</a></li>
           <li><a href="/essence.html">Essence</a></li>
-          <li id="language">EN | FR</li>
+          <!-- <li id="language">EN | FR</li> -->
         </ul>
     </nav>
 
+    <section id="CODE">
+        <p> Use this referral code to buy NEW LANDS and receive 7.5% discount off :  <span><mark>DEDUCTION</mark></span>
+        </p>
+      </section>
+      
 
-    <div class="civs">
-        <canvas id="e2data" aria-label="chart" role="img"></canvas>
-    </div>
+    <div class="charts">
+
+        <h2> Last update : <span id="lastUpdate"></span></h2>
+      
+        <h2>Civilians 1st edition (max: 500k each)</h2>
+      
+        <div class="civsData">
+          <section id="technicians">
+            <h3>Civilians : </h3>
+            <span>Last 24h : </span><br>
+            <span>Last 7 days : </span></span><br>
+            <span>Out of stock in : </span></span><br>
+            <span>Estimated date : </span></span>
+          </section>
+      
+          <section id="technicians">
+            <h3>Technicians</h3>
+            <span>+</span><span id="technicians24h"></span><br>
+            <span>+</span><span id="technicians7days"></span><br>
+            <span id="techniciansOOS"></span><span> days</span><br>
+            <span id="techniciansEstimatedDate"></span>
+          </section>
+      
+          <section id="reckoners">
+            <h3>Reckoners</h3>
+            <span>+</span><span id="reckoners24h"></span><br>
+            <span>+</span><span id="reckoners7days"></span><br>
+            <span id="reckonersOOS"></span><span> days</span><br>
+            <span id="reckonersEstimatedDate"></span>
+          </section>
+      
+          <section id="commanders">
+            <h3>Commanders</h3>
+            <span>+</span><span id="commanders24h"></span><br>
+            <span>+</span><span id="commanders7days"></span><br>
+            <span id="commandersOOS"></span><span> days</span><br>
+            <span id="commandersEstimatedDate"></span>
+          </section>
+      
+          <section id="geologists">
+            <h3>Geologists</h3>
+            <span>+</span><span id="geologists24h"></span><br>
+            <span>+</span><span id="geologists7days"></span><br>
+            <span>No Limits</span>
+            <!-- <span id="geologistsOOS"></span><span> days</span><br>
+            <span id="geologistsEstimatedDate">No cap</span> -->
+          </section>
+        </div>
+        <div class="civs">  
+          <canvas id="e2data" aria-label="chart" role="img"></canvas>
+        </div>
+
+
+
+    <footer>
+    </footer>
 </body>
 
-<script src="scriptest2.js"></script>
-<script src="dataManipulation.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="./scripts/scriptCivilians.js"></script>
+<!-- <script src="dataManipulation.js"></script> -->
+
+
 </html>

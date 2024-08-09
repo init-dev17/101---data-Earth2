@@ -150,7 +150,7 @@ p mark::selection {
 }
 
 
-body:before {
+/* body:before {
     content: "";
     position: absolute;
     height: 100%;
@@ -160,7 +160,8 @@ body:before {
     background-color: rgb(17, 17, 17);
     animation: animBefore 1.5s ease forwards;
     animation-delay: 0.15s;
-  }
+} */
+
 @keyframes animBefore {
     to {
       opacity: 0;

@@ -3,25 +3,25 @@
 
 let scrap = `Metrics
 Number of Jewels circulating
-47,500,956
+47,564,404
 Total Tier 1 Jewels Circulation
-43,082,952
+43,145,555
 Total Tier 2 Jewels Circulation
-1,706,620
+1,705,891
 Total Tier 3 Jewels Circulation
-2,711,384
+2,712,958
 Total Tier 1 Jewels Mined
-80,911,431
+81,006,352
 Number of Jewel Mentar Slots
-27,626,115
+27,627,931
 Total No. of Tiles purchased
-123,650,816
+123,658,533
 No. of T1 Tiles purchased
-67,231,378
+67,233,550
 No. of T2 Tiles purchased
-49,366,326
+49,370,104
 No. of T3 Tiles purchased
-7,053,112
+7,054,879
 Max Supply (minus burnt tokens)
 984,421,148
 Minted Tokens
@@ -29,25 +29,25 @@ Minted Tokens
 Burnt Tokens
 15,578,852
 E-ther Collected past 24 hours
-1,753,823
+1,684,483
 Bids Made Total
-2,100,763
+2,102,284
 Bids rejected Total
-372,041
+372,183
 Total Holobuildings Built
-1,214,893
+1,215,236
 No. of Cydroids
-2,554,320
+2,555,492
 No. of Civilians
-1,627,738
+1,630,664
 No. of Raid Commanders
-438,581
+439,293
 No. of E-ther Reckoners
-442,177
+442,971
 No. of Cydroid Technicians
-459,377
+460,459
 No. of Geologists
-287,603`;
+287,941`;
 
 //console.log(scrap);
 
@@ -91,7 +91,7 @@ for (element in dailyData) {
     dailyData[element] = dailyData[element].replaceAll(" ", "_");
     dailyData[element] = dailyData[element] + `" : `; // Ajoute : à la fin de l'index
     //console.log(dailyData[element]);
-
+    dailyData[element]=dailyData[element].toUpperCase();
     console.log(dailyData[element]);
   } else if (
     dailyData[element].charAt(dailyData[element].length - 1).match(/[0-9]/)
@@ -256,5 +256,8 @@ No. of Cydroid Technicians
 No. of Geologists
 287,941
 
+
+,
+{"date" : "2024/8/10", "Number_of_Jewels_circulating" : "47500956", "Total_Tier_1_Jewels_Circulation" : "43082952", "Total_Tier_2_Jewels_Circulation" : "1706620", "Total_Tier_3_Jewels_Circulation" : "2711384", "Total_Tier_1_Jewels_Mined" : "80911431", "Number_of_Jewel_Mentar_Slots" : "27626115", "Total_No_of_Tiles_purchased" : "123650816", "No_of_T1_Tiles_purchased" : "67231378", "No_of_T2_Tiles_purchased" : "49366326", "No_of_T3_Tiles_purchased" : "7053112", "Max_Supply_minus_burnt_tokens" : "984421148", "Minted_Tokens" : "311145376", "Burnt_Tokens" : "15578852", "Ether_Collected_past_24_hours" : "1753823", "Bids_Made_Total" : "2100763", "Bids_rejected_Total" : "372041", "Total_Holobuildings_Built" : "1214893", "No_of_Cydroids" : "2554320", "No_of_Civilians" : "1627738", "No_of_Raid_Commanders" : "438581", "No_of_Ether_Reckoners" : "442177", "No_of_Cydroid_Technicians" : "459377", "No_of_Geologists" : "287603"}
 
 */

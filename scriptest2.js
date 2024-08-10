@@ -67,7 +67,7 @@ function createChartCivilians(data, type) {
     type: type,
     data: {
       //labels: /*abcisses*/ ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6'],
-      labels: data.map((row) => row.date),
+      labels: data.map((row) => row.DATE),
       datasets: /*ordonnées*/ [
         {
           label: "Technicians",
@@ -108,7 +108,7 @@ async function afficherDerniereDataJSON() {
   const reponse = await fetch("./data.json");
   const array = await reponse.json();
 
-  lastUpdate.innerHTML = array[array.length - 1].date;
+  lastUpdate.innerHTML = array[array.length - 1].DATE;
 
   // Technicians
   let technicians24hcalc =
@@ -252,7 +252,7 @@ function createChartCydroids(data2, type2) {
   new Chart(ctxCydroids, {
     type: type2,
     data: {
-      labels: data2.map((row) => row.date),
+      labels: data2.map((row) => row.DATE),
       datasets: /*ordonnées*/ [
         {
           label: "Cydroids",
@@ -278,7 +278,7 @@ function createChartJewels(data3, type3) {
   new Chart(ctxJewels, {
     type: type3,
     data: {
-      labels: data3.map((row) => row.date),
+      labels: data3.map((row) => row.DATE),
       datasets: /*ordonnées*/ [
         {
           label: "Total T1 mined",

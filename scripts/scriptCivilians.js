@@ -6,7 +6,7 @@ function createChartCivilians(data, type) {
     type: type,
     data: {
       //labels: /*abcisses*/ ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6'],
-      labels: data.map((row) => row.date),
+      labels: data.map((row) => row.DATE),
       datasets: /*ordonnées*/ [
         {
           label: "Technicians",
@@ -60,7 +60,7 @@ async function afficherDerniereDataJSON() {
     const reponse = await fetch("./data.json");
     const array = await reponse.json();
 
-    lastUpdate.innerHTML = array[array.length - 1].date;
+    lastUpdate.innerHTML = array[array.length - 1].DATE;
 
     // Technicians
   let technicians24hcalc =

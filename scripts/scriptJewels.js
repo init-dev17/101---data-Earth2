@@ -7,7 +7,7 @@ function createChartJewels(data3, type3) {
   new Chart(ctxJewels, {
     type: type3,
     data: {
-      labels: data3.map((row) => row.date),
+      labels: data3.map((row) => row.DATE),
       datasets: /*ordonnées*/ [
         {
           label: "Total T1 mined",
@@ -69,7 +69,7 @@ let dansXjours = 60;
     const reponse = await fetch("./data.json");
     const array = await reponse.json();
   
-    lastUpdate.innerHTML = array[array.length - 1].date;
+    lastUpdate.innerHTML = array[array.length - 1].DATE;
   
 
 // Jewels

@@ -150,3 +150,111 @@ console.log(index.innerHTML);
 // Hébergement web
 // https://help.ovhcloud.com/csm/fr-web-hosting-multiple-websites-configuration?id=kb_article_view&sysparm_article=KB0052928
 // https://help.ovhcloud.com/csm/fr-web-hosting-publishing-website?id=kb_article_view&sysparm_article=KB0052788
+
+
+/* 9/08/2024 
+
+Metrics
+Number of Jewels circulating
+47,500,956
+Total Tier 1 Jewels Circulation
+43,082,952
+Total Tier 2 Jewels Circulation
+1,706,620
+Total Tier 3 Jewels Circulation
+2,711,384
+Total Tier 1 Jewels Mined
+80,911,431
+Number of Jewel Mentar Slots
+27,626,115
+Total No. of Tiles purchased
+123,650,816
+No. of T1 Tiles purchased
+67,231,378
+No. of T2 Tiles purchased
+49,366,326
+No. of T3 Tiles purchased
+7,053,112
+Max Supply (minus burnt tokens)
+984,421,148
+Minted Tokens
+311,145,376
+Burnt Tokens
+15,578,852
+E-ther Collected past 24 hours
+1,753,823
+Bids Made Total
+2,100,763
+Bids rejected Total
+372,041
+Total Holobuildings Built
+1,214,893
+No. of Cydroids
+2,554,320
+No. of Civilians
+1,627,738
+No. of Raid Commanders
+438,581
+No. of E-ther Reckoners
+442,177
+No. of Cydroid Technicians
+459,377
+No. of Geologists
+287,603
+
+*/
+
+
+
+/* 10/08/2024 
+
+Metrics
+Number of Jewels circulating
+47,564,404
+Total Tier 1 Jewels Circulation
+43,145,555
+Total Tier 2 Jewels Circulation
+1,705,891
+Total Tier 3 Jewels Circulation
+2,712,958
+Total Tier 1 Jewels Mined
+81,006,352
+Number of Jewel Mentar Slots
+27,627,931
+Total No. of Tiles purchased
+123,658,533
+No. of T1 Tiles purchased
+67,233,550
+No. of T2 Tiles purchased
+49,370,104
+No. of T3 Tiles purchased
+7,054,879
+Max Supply (minus burnt tokens)
+984,421,148
+Minted Tokens
+311,145,376
+Burnt Tokens
+15,578,852
+E-ther Collected past 24 hours
+1,684,483
+Bids Made Total
+2,102,284
+Bids rejected Total
+372,183
+Total Holobuildings Built
+1,215,236
+No. of Cydroids
+2,555,492
+No. of Civilians
+1,630,664
+No. of Raid Commanders
+439,293
+No. of E-ther Reckoners
+442,971
+No. of Cydroid Technicians
+460,459
+No. of Geologists
+287,941
+
+
+*/

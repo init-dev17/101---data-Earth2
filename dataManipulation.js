@@ -3,25 +3,25 @@
 
 let scrap = `Metrics
 Number of Jewels circulating
-47,768,001
+47,838,841
 Total Tier 1 Jewels Circulation
-43,344,914
+43,413,989
 Total Tier 2 Jewels Circulation
-1,705,108
+1,705,326
 Total Tier 3 Jewels Circulation
-2,717,979
+2,719,526
 Total Tier 1 Jewels Mined
-81,295,153
+81,391,971
 Number of Jewel Mentar Slots
-27,633,411
+27,636,605
 Total No. of Tiles purchased
-123,685,534
+123,703,499
 No. of T1 Tiles purchased
-67,235,729
+67,239,513
 No. of T2 Tiles purchased
-49,387,091
+49,394,977
 No. of T3 Tiles purchased
-7,062,714
+7,069,009
 Max Supply (minus burnt tokens)
 984,421,148
 Minted Tokens
@@ -29,25 +29,25 @@ Minted Tokens
 Burnt Tokens
 15,578,852
 E-ther Collected past 24 hours
-1,794,830
+1,763,163
 Bids Made Total
-2,106,207
+2,107,178
 Bids rejected Total
-372,503
+372,648
 Total Holobuildings Built
-1,216,287
+1,216,948
 No. of Cydroids
-2,558,394
+2,559,788
 No. of Civilians
-1,639,265
+1,642,096
 No. of Raid Commanders
-441,687
+442,551
 No. of E-ther Reckoners
-445,311
+445,978
 No. of Cydroid Technicians
-463,299
+464,396
 No. of Geologists
-288,968`;
+289,171`;
 
 //console.log(scrap);
 

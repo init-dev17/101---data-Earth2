@@ -78,7 +78,7 @@ array[array.length - 1].TOTAL_TIER_1_JEWELS_MINED -
 array[array.length - 2].TOTAL_TIER_1_JEWELS_MINED;
 let jewels7dayscalc =
 array[array.length - 1].TOTAL_TIER_1_JEWELS_MINED -
-array[array.length - 7].TOTAL_TIER_1_JEWELS_MINED;
+array[array.length - 8].TOTAL_TIER_1_JEWELS_MINED;
 let jewelsOOScalc = Math.trunc(
 (125000000 - array[array.length - 1].TOTAL_TIER_1_JEWELS_MINED) /
   (jewels7dayscalc / 7)

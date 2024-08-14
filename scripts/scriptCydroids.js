@@ -62,7 +62,7 @@ let dansXjours = 60;
   array[array.length - 2].NO_OF_CYDROIDS;
 let cydroids7dayscalc =
   array[array.length - 1].NO_OF_CYDROIDS -
-  array[array.length - 7].NO_OF_CYDROIDS;
+  array[array.length - 8].NO_OF_CYDROIDS;
 let cydroidsOOScalc = Math.trunc(
   (5000000 - array[array.length - 1].NO_OF_CYDROIDS) / (cydroids7dayscalc / 7)
 );

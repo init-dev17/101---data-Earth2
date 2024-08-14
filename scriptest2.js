@@ -116,7 +116,7 @@ async function afficherDerniereDataJSON() {
     array[array.length - 2].NO_OF_CYDROID_TECHNICIANS;
   let technicians7dayscalc =
     array[array.length - 1].NO_OF_CYDROID_TECHNICIANS -
-    array[array.length - 7].NO_OF_CYDROID_TECHNICIANS;
+    array[array.length - 8].NO_OF_CYDROID_TECHNICIANS;
   let techniciansOOScalc = Math.trunc(
     (500000 - array[array.length - 1].NO_OF_CYDROID_TECHNICIANS) /
       (technicians7dayscalc / 7)
@@ -135,7 +135,7 @@ async function afficherDerniereDataJSON() {
     array[array.length - 2].NO_OF_ETHER_RECKONERS;
   let reckoners7dayscalc =
     array[array.length - 1].NO_OF_ETHER_RECKONERS -
-    array[array.length - 7].NO_OF_ETHER_RECKONERS;
+    array[array.length - 8].NO_OF_ETHER_RECKONERS;
   let reckonersOOScalc = Math.trunc(
     (500000 - array[array.length - 1].NO_OF_ETHER_RECKONERS) /
       (reckoners7dayscalc / 7)
@@ -154,7 +154,7 @@ async function afficherDerniereDataJSON() {
     array[array.length - 2].NO_OF_RAID_COMMANDERS;
   let commanders7dayscalc =
     array[array.length - 1].NO_OF_RAID_COMMANDERS -
-    array[array.length - 7].NO_OF_RAID_COMMANDERS;
+    array[array.length - 8].NO_OF_RAID_COMMANDERS;
   let commandersOOScalc = Math.trunc(
     (500000 - array[array.length - 1].NO_OF_RAID_COMMANDERS) /
       (commanders7dayscalc / 7)
@@ -173,7 +173,7 @@ async function afficherDerniereDataJSON() {
     array[array.length - 2].NO_OF_GEOLOGISTS;
   let geologists7dayscalc =
     array[array.length - 1].NO_OF_GEOLOGISTS -
-    array[array.length - 7].NO_OF_GEOLOGISTS;
+    array[array.length - 8].NO_OF_GEOLOGISTS;
   let geologistsOOScalc = Math.trunc(
     (500000 - array[array.length - 1].NO_OF_GEOLOGISTS) /
       (geologists7dayscalc / 7)
@@ -189,7 +189,7 @@ async function afficherDerniereDataJSON() {
     array[array.length - 2].NO_OF_CYDROIDS;
   let cydroids7dayscalc =
     array[array.length - 1].NO_OF_CYDROIDS -
-    array[array.length - 7].NO_OF_CYDROIDS;
+    array[array.length - 8].NO_OF_CYDROIDS;
   let cydroidsOOScalc = Math.trunc(
     (5000000 - array[array.length - 1].NO_OF_CYDROIDS) / (cydroids7dayscalc / 7)
   );
@@ -207,7 +207,7 @@ async function afficherDerniereDataJSON() {
     array[array.length - 2].TOTAL_TIER_1_JEWELS_MINED;
   let jewels7dayscalc =
     array[array.length - 1].TOTAL_TIER_1_JEWELS_MINED -
-    array[array.length - 7].TOTAL_TIER_1_JEWELS_MINED;
+    array[array.length - 8].TOTAL_TIER_1_JEWELS_MINED;
   let jewelsOOScalc = Math.trunc(
     (125000000 - array[array.length - 1].TOTAL_TIER_1_JEWELS_MINED) /
       (jewels7dayscalc / 7)

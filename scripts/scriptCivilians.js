@@ -68,7 +68,7 @@ async function afficherDerniereDataJSON() {
   array[array.length - 2].NO_OF_CYDROID_TECHNICIANS;
 let technicians7dayscalc =
   array[array.length - 1].NO_OF_CYDROID_TECHNICIANS -
-  array[array.length - 7].NO_OF_CYDROID_TECHNICIANS;
+  array[array.length - 8].NO_OF_CYDROID_TECHNICIANS;
 let techniciansOOScalc = Math.trunc(
   (500000 - array[array.length - 1].NO_OF_CYDROID_TECHNICIANS) /
     (technicians7dayscalc / 7)
@@ -84,7 +84,7 @@ let reckoners24hcalc =
   array[array.length - 2].NO_OF_ETHER_RECKONERS;
 let reckoners7dayscalc =
   array[array.length - 1].NO_OF_ETHER_RECKONERS -
-  array[array.length - 7].NO_OF_ETHER_RECKONERS;
+  array[array.length - 8].NO_OF_ETHER_RECKONERS;
 let reckonersOOScalc = Math.trunc(
   (500000 - array[array.length - 1].NO_OF_ETHER_RECKONERS) /
     (reckoners7dayscalc / 7)
@@ -103,7 +103,7 @@ let commanders24hcalc =
   array[array.length - 2].NO_OF_RAID_COMMANDERS;
 let commanders7dayscalc =
   array[array.length - 1].NO_OF_RAID_COMMANDERS -
-  array[array.length - 7].NO_OF_RAID_COMMANDERS;
+  array[array.length - 8].NO_OF_RAID_COMMANDERS;
 let commandersOOScalc = Math.trunc(
   (500000 - array[array.length - 1].NO_OF_RAID_COMMANDERS) /
     (commanders7dayscalc / 7)
@@ -122,7 +122,7 @@ let geologists24hcalc =
   array[array.length - 2].NO_OF_GEOLOGISTS;
 let geologists7dayscalc =
   array[array.length - 1].NO_OF_GEOLOGISTS -
-  array[array.length - 7].NO_OF_GEOLOGISTS;
+  array[array.length - 8].NO_OF_GEOLOGISTS;
 let geologistsOOScalc = Math.trunc(
   (500000 - array[array.length - 1].NO_OF_GEOLOGISTS) /
     (geologists7dayscalc / 7)

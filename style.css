@@ -50,15 +50,13 @@ body{
 nav{
     background: #191A1F;
     padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 }
 
 nav ul{
-    display: flex;
-    justify-content: space-evenly;  
-    align-items : center; 
-
-    
-
+display: flex;
+justify-content: space-evenly;  
 }
 nav a, nav #language{
     height: 86%;
@@ -245,9 +243,32 @@ footer a{
 
 
 @media screen and (max-width: 750px) { /* Tablette, actif si max-width à 1000px */
+    nav{
+        display: block;
+    }
+    #burger-menu{
+        position: absolute;
+    }
+    #home{
+        display: flex;
+        justify-content: center;
+    }
+    #menu{
+        position: absolute;
+        background-color: #191A1F;
+        width: 250px;
+        height: 100%;
+        transition: 0,5s ease-out;
+        left: -350px; /* */
+    }#menu.active{
+        left: -350px;
+    }
     nav a {
         font-size: 1.2rem;
      }
+     nav ul{
+        flex-direction: column; 
+    }
      #CODE{
          height: 46px;    
      }  

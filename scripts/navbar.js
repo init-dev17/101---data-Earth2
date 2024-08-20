@@ -2,16 +2,16 @@
 
 
 const burgerBtn = document.getElementById("burgerBtn");
-console.log(burgerBtn);
+//console.log(burgerBtn);
 
 const iBurgerBtn = document.getElementById("iBurgerBtn");
-console.log(iBurgerBtn);
+//console.log(iBurgerBtn);
 
 const burgerMenu = document.getElementById("burgerMenu");
-console.log(burgerMenu);
+//console.log(burgerMenu);
 
 const menu = document.getElementById("menu");
-console.log(menu);
+//console.log(menu);
 
 
 burgerBtn.addEventListener("click", () => {

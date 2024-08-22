@@ -2,52 +2,52 @@
 // https://earth2.io/robots.txt
 
 let scrap = `Metrics
-Number of Jewels circulating
-48,211,274
-Total Tier 1 Jewels Circulation
-43,764,817
-Total Tier 2 Jewels Circulation
-1,707,357
-Total Tier 3 Jewels Circulation
-2,739,100
-Total Tier 1 Jewels Mined
-82,083,536
-Number of Jewel Mentar Slots
-27,651,840
-Total No. of Tiles purchased
-123,777,145
-No. of T1 Tiles purchased
-67,245,305
-No. of T2 Tiles purchased
-49,436,439
-No. of T3 Tiles purchased
-7,095,401
-Max Supply (minus burnt tokens)
+NUMBER OF JEWELS CIRCULATING
+48,274,462
+TOTAL TIER 1 JEWELS CIRCULATION
+43,824,760
+TOTAL TIER 2 JEWELS CIRCULATION
+1,708,243
+TOTAL TIER 3 JEWELS CIRCULATION
+2,741,459
+TOTAL TIER 1 JEWELS MINED
+82,187,692
+NUMBER OF JEWEL MENTAR SLOTS
+27,653,960
+TOTAL NO. OF TILES PURCHASED
+123,794,061
+NO. OF T1 TILES PURCHASED
+67,245,525
+NO. OF T2 TILES PURCHASED
+49,443,546
+NO. OF T3 TILES PURCHASED
+7,104,990
+MAX SUPPLY (MINUS BURNT TOKENS)
 984,421,148
-Minted Tokens
+MINTED TOKENS
 311,145,376
-Burnt Tokens
+BURNT TOKENS
 15,578,852
-E-ther Collected past 24 hours
-1,686,012
-Bids Made Total
-2,111,582
-Bids rejected Total
-373,667
-Total Holobuildings Built
-1,219,523
-No. of Cydroids
-2,567,937
-No. of Civilians
-1,662,042
-No. of Raid Commanders
-446,864
-No. of E-ther Reckoners
-451,250
-No. of Cydroid Technicians
-473,053
-No. of Geologists
-290,875`;
+E-THER COLLECTED PAST 24 HOURS
+1,710,566
+BIDS MADE TOTAL
+2,111,864
+BIDS REJECTED TOTAL
+373,760
+TOTAL HOLOBUILDINGS BUILT
+1,219,881
+NO. OF CYDROIDS
+2,569,719
+NO. OF CIVILIANS
+1,664,546
+NO. OF RAID COMMANDERS
+447,510
+NO. OF E-THER RECKONERS
+451,983
+NO. OF CYDROID TECHNICIANS
+474,017
+NO. OF GEOLOGISTS
+291,036`;
 
 //console.log(scrap);
 
@@ -152,112 +152,13 @@ console.log(index.innerHTML);
 // https://help.ovhcloud.com/csm/fr-web-hosting-publishing-website?id=kb_article_view&sysparm_article=KB0052788
 
 
-/* 9/08/2024 
+/* 
+Page Earth2
+let metrics = document.getElementsByClassName("gap-y-6 grid justify-items-center xl:grid-cols-3 md:grid-cols-2");
+console.log(metrics[0].innerText);
 
-Metrics
-Number of Jewels circulating
-47,500,956
-Total Tier 1 Jewels Circulation
-43,082,952
-Total Tier 2 Jewels Circulation
-1,706,620
-Total Tier 3 Jewels Circulation
-2,711,384
-Total Tier 1 Jewels Mined
-80,911,431
-Number of Jewel Mentar Slots
-27,626,115
-Total No. of Tiles purchased
-123,650,816
-No. of T1 Tiles purchased
-67,231,378
-No. of T2 Tiles purchased
-49,366,326
-No. of T3 Tiles purchased
-7,053,112
-Max Supply (minus burnt tokens)
-984,421,148
-Minted Tokens
-311,145,376
-Burnt Tokens
-15,578,852
-E-ther Collected past 24 hours
-1,753,823
-Bids Made Total
-2,100,763
-Bids rejected Total
-372,041
-Total Holobuildings Built
-1,214,893
-No. of Cydroids
-2,554,320
-No. of Civilians
-1,627,738
-No. of Raid Commanders
-438,581
-No. of E-ther Reckoners
-442,177
-No. of Cydroid Technicians
-459,377
-No. of Geologists
-287,603
-
-*/
-
-
-
-/* 10/08/2024 
-
-Metrics
-Number of Jewels circulating
-47,564,404
-Total Tier 1 Jewels Circulation
-43,145,555
-Total Tier 2 Jewels Circulation
-1,705,891
-Total Tier 3 Jewels Circulation
-2,712,958
-Total Tier 1 Jewels Mined
-81,006,352
-Number of Jewel Mentar Slots
-27,627,931
-Total No. of Tiles purchased
-123,658,533
-No. of T1 Tiles purchased
-67,233,550
-No. of T2 Tiles purchased
-49,370,104
-No. of T3 Tiles purchased
-7,054,879
-Max Supply (minus burnt tokens)
-984,421,148
-Minted Tokens
-311,145,376
-Burnt Tokens
-15,578,852
-E-ther Collected past 24 hours
-1,684,483
-Bids Made Total
-2,102,284
-Bids rejected Total
-372,183
-Total Holobuildings Built
-1,215,236
-No. of Cydroids
-2,555,492
-No. of Civilians
-1,630,664
-No. of Raid Commanders
-439,293
-No. of E-ther Reckoners
-442,971
-No. of Cydroid Technicians
-460,459
-No. of Geologists
-287,941
-
-
-,
-{"date" : "2024/8/10", "Number_of_Jewels_circulating" : "47500956", "Total_Tier_1_Jewels_Circulation" : "43082952", "Total_Tier_2_Jewels_Circulation" : "1706620", "Total_Tier_3_Jewels_Circulation" : "2711384", "Total_Tier_1_Jewels_Mined" : "80911431", "Number_of_Jewel_Mentar_Slots" : "27626115", "Total_No_of_Tiles_purchased" : "123650816", "No_of_T1_Tiles_purchased" : "67231378", "No_of_T2_Tiles_purchased" : "49366326", "No_of_T3_Tiles_purchased" : "7053112", "Max_Supply_minus_burnt_tokens" : "984421148", "Minted_Tokens" : "311145376", "Burnt_Tokens" : "15578852", "Ether_Collected_past_24_hours" : "1753823", "Bids_Made_Total" : "2100763", "Bids_rejected_Total" : "372041", "Total_Holobuildings_Built" : "1214893", "No_of_Cydroids" : "2554320", "No_of_Civilians" : "1627738", "No_of_Raid_Commanders" : "438581", "No_of_Ether_Reckoners" : "442177", "No_of_Cydroid_Technicians" : "459377", "No_of_Geologists" : "287603"}
+Page Activities
+let metrics = document.getElementsByClassName("ActivityComponent_metricsWrapper__PSYZP");
+console.log(metrics[0].innerText);
 
 */

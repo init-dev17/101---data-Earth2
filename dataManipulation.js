@@ -2,52 +2,52 @@
 // https://earth2.io/robots.txt
 
 let scrap = `Metrics
-NUMBER OF JEWELS CIRCULATING
-48,346,164
-TOTAL TIER 1 JEWELS CIRCULATION
-43,896,062
-TOTAL TIER 2 JEWELS CIRCULATION
-1,707,811
-TOTAL TIER 3 JEWELS CIRCULATION
-2,742,291
-TOTAL TIER 1 JEWELS MINED
-82,280,900
-NUMBER OF JEWEL MENTAR SLOTS
-27,656,749
-TOTAL NO. OF TILES PURCHASED
-123,804,824
-NO. OF T1 TILES PURCHASED
-67,246,130
-NO. OF T2 TILES PURCHASED
-49,449,486
-NO. OF T3 TILES PURCHASED
-7,109,208
-MAX SUPPLY (MINUS BURNT TOKENS)
+Number of Jewels circulating
+48,401,552
+Total Tier 1 Jewels Circulation
+43,950,878
+Total Tier 2 Jewels Circulation
+1,708,008
+Total Tier 3 Jewels Circulation
+2,742,666
+Total Tier 1 Jewels Mined
+82,347,591
+Number of Jewel Mentar Slots
+27,657,356
+Total No. of Tiles purchased
+123,807,928
+No. of T1 Tiles purchased
+67,246,240
+No. of T2 Tiles purchased
+49,453,110
+No. of T3 Tiles purchased
+7,108,578
+Max Supply (minus burnt tokens)
 984,421,148
-MINTED TOKENS
+Minted Tokens
 311,145,376
-BURNT TOKENS
+Burnt Tokens
 15,578,852
-E-THER COLLECTED PAST 24 HOURS
-1,676,923
-BIDS MADE TOTAL
-2,112,359
-BIDS REJECTED TOTAL
-373,926
-TOTAL HOLOBUILDINGS BUILT
-1,220,237
-NO. OF CYDROIDS
-2,571,161
-NO. OF CIVILIANS
-1,666,979
-NO. OF RAID COMMANDERS
-448,191
-NO. OF E-THER RECKONERS
-452,742
-NO. OF CYDROID TECHNICIANS
-474,844
-NO. OF GEOLOGISTS
-291,202`;
+E-ther Collected past 24 hours
+1,464,877
+Bids Made Total
+2,112,510
+Bids rejected Total
+373,975
+Total Holobuildings Built
+1,220,269
+No. of Cydroids
+2,571,427
+No. of Civilians
+1,668,638
+No. of Raid Commanders
+448,643
+No. of E-ther Reckoners
+453,240
+No. of Cydroid Technicians
+475,361
+No. of Geologists
+291,394`;
 
 //console.log(scrap);
 
@@ -161,4 +161,31 @@ Page Activities
 let metrics = document.getElementsByClassName("ActivityComponent_metricsWrapper__PSYZP");
 console.log(metrics[0].innerText);
 
+*/
+
+
+/*
+let fetchExample = fetch("https://fjolt.com").then((res) => { 
+console.log("test");  
+});
+let websiteData = fetch("https://earth2.io").then(res => res.text()).then((data) => { return data; }); // Now contains our website's HTML.
+*/
+
+
+
+/*
+// https://youtu.be/gDmmokYDPOw
+  let xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://earth2.io/activities", true);
+  xhr.responseType="document";
+  xhr.onload = function(){ 
+    if(xhr.readyState == 4 && xhr.status == 200)
+    {  
+    console.log("testOK");
+    } 
+  };
+  xhr.onerror = function(){
+    console.error(xhr.status, xhr.statusText);
+  }
+  xhr.send();
 */

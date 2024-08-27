@@ -2,52 +2,52 @@
 // https://earth2.io/robots.txt
 
 let scrap = `Metrics
-NUMBER OF JEWELS CIRCULATING
-48,488,169
-TOTAL TIER 1 JEWELS CIRCULATION
-44,027,957
-TOTAL TIER 2 JEWELS CIRCULATION
-1,709,585
-TOTAL TIER 3 JEWELS CIRCULATION
-2,750,627
-TOTAL TIER 1 JEWELS MINED
-82,558,685
-NUMBER OF JEWEL MENTAR SLOTS
-27,663,402
-TOTAL NO. OF TILES PURCHASED
-123,822,490
-NO. OF T1 TILES PURCHASED
-67,248,183
-NO. OF T2 TILES PURCHASED
-49,464,667
-NO. OF T3 TILES PURCHASED
-7,109,640
-MAX SUPPLY (MINUS BURNT TOKENS)
+Number of Jewels circulating
+48,561,357
+Total Tier 1 Jewels Circulation
+44,099,905
+Total Tier 2 Jewels Circulation
+1,709,625
+Total Tier 3 Jewels Circulation
+2,751,827
+Total Tier 1 Jewels Mined
+82,653,366
+Number of Jewel Mentar Slots
+27,666,841
+Total No. of Tiles purchased
+123,828,069
+No. of T1 Tiles purchased
+67,250,654
+No. of T2 Tiles purchased
+49,467,115
+No. of T3 Tiles purchased
+7,110,300
+Max Supply (minus burnt tokens)
 984,421,148
-MINTED TOKENS
+Minted Tokens
 311,145,376
-BURNT TOKENS
+Burnt Tokens
 15,578,852
-E-THER COLLECTED PAST 24 HOURS
-1,766,185
-BIDS MADE TOTAL
-2,113,296
-BIDS REJECTED TOTAL
-374,076
-TOTAL HOLOBUILDINGS BUILT
-1,220,523
-NO. OF CYDROIDS
-2,573,430
-NO. OF CIVILIANS
-1,675,209
-NO. OF RAID COMMANDERS
-450,297
-NO. OF E-THER RECKONERS
-454,936
-NO. OF CYDROID TECHNICIANS
-478,145
-NO. OF GEOLOGISTS
-291,831`;
+E-ther Collected past 24 hours
+1,716,327
+Bids Made Total
+2,114,461
+Bids rejected Total
+374,184
+Total Holobuildings Built
+1,221,117
+No. of Cydroids
+2,574,902
+No. of Civilians
+1,679,704
+No. of Raid Commanders
+451,253
+No. of E-ther Reckoners
+455,805
+No. of Cydroid Technicians
+480,494
+No. of Geologists
+292,152`;
 
 //console.log(scrap);
 

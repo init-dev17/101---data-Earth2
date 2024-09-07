@@ -76,7 +76,8 @@ let techniciansOOScalc = Math.trunc(
 technicians24h.innerHTML = technicians24hcalc;
 technicians7days.innerHTML = technicians7dayscalc;
 techniciansOOS.innerHTML = techniciansOOScalc;
-techniciansEstimatedDate.innerHTML = dateAddDays(techniciansOOScalc,today).toDateString();
+techniciansEstimatedDate.innerHTML = "Tue Sep 03 2024";
+//techniciansEstimatedDate.innerHTML = dateAddDays(techniciansOOScalc,today).toDateString();
 
 // Reckoners
 let reckoners24hcalc =

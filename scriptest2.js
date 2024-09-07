@@ -124,10 +124,11 @@ async function afficherDerniereDataJSON() {
   technicians24h.innerHTML = technicians24hcalc;
   technicians7days.innerHTML = technicians7dayscalc;
   techniciansOOS.innerHTML = techniciansOOScalc;
-  techniciansEstimatedDate.innerHTML = dateAddDays(
+  techniciansEstimatedDate.innerHTML = "Tue Sep 03 2024";
+  /*techniciansEstimatedDate.innerHTML = dateAddDays(
     techniciansOOScalc,
     today
-  ).toDateString();
+  ).toDateString();*/
 
   // Reckoners
   let reckoners24hcalc =

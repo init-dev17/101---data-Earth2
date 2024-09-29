@@ -1,8 +1,34 @@
 
+const ctxEther = document.getElementById("e2ether");
+function createChartEther(data, type) {
+  new Chart(ctxEther, {
+    type: type,
+    data: {
+      labels: data.map((row) => row.DATE),
+      datasets: /*ordonnées*/ [
+        {
+          label: "Ether collected last 24h",
+          //data: ['1', '2', '3', '4', '5', '6'],
+          data: data.map((row) => row.ETHER_COLLECTED_PAST_24_HOURS),
+          borderColor: "DarkGray",
+          backgroundColor: "DarkGray",
+        },
+      ],
+    },
+    /*,
+        options: {
+            legend: {
+                labels:{
+                    fontColor: 'white',
+                }
+            }
+        }*/
+  });
+}
+
 
 
 const ctxEssence = document.getElementById("e2essence");
-
 function createChartEssence(data4, type4) {
   new Chart(ctxEssence, {
     type: type4,
@@ -50,15 +76,11 @@ let dansXjours = 60;
 
 // Lire JSON
 // https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch
-  async function afficherDerniereDataJSON() {
-    const reponse = await fetch("./data.json");
-    const array = await reponse.json();
+async function afficherDerniereDataJSON() {
+  const reponse = await fetch("./data.json");
+  const array = await reponse.json();
   
-    lastUpdate.innerHTML = array[array.length - 1].date;
-  
-// Essence
-
-
+  lastUpdate.innerHTML = array[array.length - 1].DATE;
 }
 
 
@@ -77,5 +99,6 @@ fetch("data.json")
     }
   })
   .then(function (data) {
+    createChartEther(data,"bar");
     createChartEssence(data, "line");
-  });
+});

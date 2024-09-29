@@ -181,18 +181,18 @@ p mark::selection {
 display: flex;
 }
 
-.civsData section {
+.civsData section{
     padding: 25px;
 }
 
-.civs, .cydroids, .jewels, .essence, .geos{
+.civs, .cydroids, .jewels, .essence, .geos, .lands{
     background-color: whitesmoke;
     width: 90%;
     max-width: 1000px;
     border-radius: 10px;
     /*box-shadow: 7px 7px 5px #578df86a;*/
 }
-.statsSpan, .geos{
+.statsSpan, .geos, .lands, .landsData{
     margin-bottom: 20px;
 }
 

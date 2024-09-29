@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essence - ReadyPlayEarth2</title>
+
+    <link rel="icon" href="./assets/img/41652.png" />
+
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+</head>
+
+<body>
+  <nav>
+    <div id="burgerMenu">
+      <span id="burgerBtn"><i id="iBurgerBtn" class="fa-solid fa-bars"></i></span>
+    </div> 
+    <li id="home"><a href="http://www.readyplayearth2.com/">ReadyPlayearth2</a></li>
+    <ul id="menu">
+      <li><a href="http://www.readyplayearth2.com/civilians.html">Civilians</a></li>
+      <li><a href="http://www.readyplayearth2.com/jewels.html">Jewels</a></li>
+      <li><a href="http://www.readyplayearth2.com/cydroids.html">Cydroids</a></li>
+      <li><a href="http://www.readyplayearth2.com/essence.html">Essence</a></li>
+      <!-- <li id="language">EN | FR</li> -->
+    </ul>
+  </nav>
+
+    <section id="CODE">
+        <p> Use this referral code to buy NEW LANDS and receive 7.5% discount off :  <span><mark>DEDUCTION</mark></span>
+        </p>
+      </section>
+      
+
+    <div class="charts">
+
+        <h2> Last update : <span id="lastUpdate"></span></h2>
+      
+        <div class="landsData"> 
+            <h2>Lands</h2>
+            <span>Total purchased : </span><span id="LandsTotal"></span><br>
+            <span>T1 purchased : </span><span id="LandsT1"></span><br>
+            <span>T2 purchased : </span><span id="LandsT2"></span><br>
+            <span>T3 purchased : </span><span id="LandsT3"></span>
+          </div>
+          <div class="lands">  
+            <canvas id="e2landsTotal" aria-label="chart" role="img"></canvas>
+          </div>
+          <div class="lands">  
+            <canvas id="e2landsT1" aria-label="chart" role="img"></canvas>
+          </div>
+          <div class="lands">  
+            <canvas id="e2landsT2" aria-label="chart" role="img"></canvas>
+          </div>
+          <div class="lands">  
+            <canvas id="e2landsT3" aria-label="chart" role="img"></canvas>
+          </div>
+
+        </div>
+
+
+
+    <footer>
+    </footer>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="./scripts/navbar.js"></script>
+<script src="./scripts/scriptLands.js"></script>
+<!-- <script src="dataManipulation.js"></script> -->
+
+
+</html>

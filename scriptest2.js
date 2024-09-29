@@ -60,8 +60,30 @@ let dansXjours = 60;
 // Format date avec .toDateString()
 // https://www.geeksforgeeks.org/how-to-format-a-date-in-javascript/
 
-const ctx = document.getElementById("e2data");
 
+const geo = document.getElementById("e2geos");
+function createChartGeologists(data, type) {
+  new Chart(geo, {
+    type: type,
+    data: {
+      //labels: /*abcisses*/ ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6'],
+      labels: data.map((row) => row.DATE),
+      datasets: /*ordonnées*/ [
+        
+        {
+          label: "Geologists",
+          //data: ['1', '2', '3', '4', '5', '6'],
+          data: data.map((row) => row.NO_OF_GEOLOGISTS),
+          borderColor: "whitesmoke",
+          backgroundColor: "whitesmoke",
+        },
+      ],
+    },
+  });
+}
+
+
+const ctx = document.getElementById("e2data");
 function createChartCivilians(data, type) {
   new Chart(ctx, {
     type: type,
@@ -89,14 +111,7 @@ function createChartCivilians(data, type) {
           //backgroundColor: '#000000',
           borderColor: "rgb(254,0,76)",
           backgroundColor: "rgb(254,0,76)",
-        },
-        {
-          label: "Geologists",
-          //data: ['1', '2', '3', '4', '5', '6'],
-          data: data.map((row) => row.NO_OF_GEOLOGISTS),
-          borderColor: "whitesmoke",
-          backgroundColor: "whitesmoke",
-        },
+        }
       ],
     },
   });
@@ -349,6 +364,8 @@ fetch("data.json")
     }
   })
   .then(function (data) {
+    createChartGeologists(data,"line");
+
     createChartCivilians(data, "line");
     createChartCydroids(data, "line");
     createChartJewels(data, "line");

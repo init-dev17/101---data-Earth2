@@ -75,7 +75,7 @@ let techniciansOOScalc = Math.trunc(
 );
 technicians24h.innerHTML = technicians24hcalc;
 technicians7days.innerHTML = technicians7dayscalc;
-techniciansOOS.innerHTML = techniciansOOScalc;
+techniciansOOS.innerHTML = "Done "; //techniciansOOScalc;
 techniciansEstimatedDate.innerHTML = "Tue Sep 03 2024";
 //techniciansEstimatedDate.innerHTML = dateAddDays(techniciansOOScalc,today).toDateString();
 
@@ -92,11 +92,9 @@ let reckonersOOScalc = Math.trunc(
 );
 reckoners24h.innerHTML = reckoners24hcalc;
 reckoners7days.innerHTML = reckoners7dayscalc;
-reckonersOOS.innerHTML = reckonersOOScalc;
-reckonersEstimatedDate.innerHTML = dateAddDays(
-  reckonersOOScalc,
-  today
-).toDateString();
+reckonersOOS.innerHTML = "Done "; //reckonersOOScalc;
+reckonersEstimatedDate.innerHTML = "Sat Sep 28 2024";
+//reckonersEstimatedDate.innerHTML = dateAddDays(reckonersOOScalc,today).toDateString();
 
 // Commanders
 let commanders24hcalc =
@@ -111,11 +109,9 @@ let commandersOOScalc = Math.trunc(
 );
 commanders24h.innerHTML = commanders24hcalc;
 commanders7days.innerHTML = commanders7dayscalc;
-commandersOOS.innerHTML = commandersOOScalc;
-commandersEstimatedDate.innerHTML = dateAddDays(
-  commandersOOScalc,
-  today
-).toDateString();
+commandersOOS.innerHTML = "Done "; //commandersOOScalc;
+commandersEstimatedDate.innerHTML = "Sat Sep 28 2024";
+// commandersEstimatedDate.innerHTML = dateAddDays(commandersOOScalc,today).toDateString();
 
 // Geologists
 let geologists24hcalc =

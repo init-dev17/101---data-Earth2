@@ -28,7 +28,23 @@ function createChartCivilians(data, type) {
           //backgroundColor: '#000000',
           borderColor: "rgb(254,0,76)",
           backgroundColor: "rgb(254,0,76)",
-        },
+        }        
+      ],
+    },
+  });
+}
+
+
+const geo = document.getElementById("e2geos");
+
+function createChartGeologists(data, type) {
+  new Chart(geo, {
+    type: type,
+    data: {
+      //labels: /*abcisses*/ ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6'],
+      labels: data.map((row) => row.DATE),
+      datasets: /*ordonnées*/ [
+        
         {
           label: "Geologists",
           //data: ['1', '2', '3', '4', '5', '6'],
@@ -40,6 +56,7 @@ function createChartCivilians(data, type) {
     },
   });
 }
+
 
 
 // Estimated date civs
@@ -144,7 +161,7 @@ fetch("data.json")
   })
   .then(function (data) {
     createChartCivilians(data, "line");
-
+    createChartGeologists(data,"line");
 
   });
 

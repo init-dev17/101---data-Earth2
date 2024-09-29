@@ -185,14 +185,14 @@ display: flex;
     padding: 25px;
 }
 
-.civs, .cydroids, .jewels, .essence{
+.civs, .cydroids, .jewels, .essence, .geos{
     background-color: whitesmoke;
     width: 90%;
     max-width: 1000px;
     border-radius: 10px;
     /*box-shadow: 7px 7px 5px #578df86a;*/
 }
-.statsSpan{
+.statsSpan, .geos{
     margin-bottom: 20px;
 }
 

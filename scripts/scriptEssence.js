@@ -7,7 +7,7 @@ function createChartEther(data, type) {
       labels: data.map((row) => row.DATE),
       datasets: /*ordonnées*/ [
         {
-          label: "Ether collected last 24h",
+          label: "Ether collected past 24h",
           //data: ['1', '2', '3', '4', '5', '6'],
           data: data.map((row) => row.ETHER_COLLECTED_PAST_24_HOURS),
           borderColor: "DarkGray",

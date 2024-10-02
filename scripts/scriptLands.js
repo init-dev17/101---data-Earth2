@@ -107,14 +107,40 @@ function createChartLandsT3(data2, type2) {
 }
 
 
+
+let landsTotal = document.getElementById("landsTotal");
+let landsT1 = document.getElementById("landsT1");
+let landsT2 = document.getElementById("landsT2");
+let landsT3 = document.getElementById("landsT3");
+
 // Lire JSON
 // https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch
 async function afficherDerniereDataJSON() {
-    const reponse = await fetch("./data.json");
-    const array = await reponse.json();
+  const reponse = await fetch("./data.json");
+  const array = await reponse.json();
   
-    lastUpdate.innerHTML = array[array.length - 1].DATE;
+  lastUpdate.innerHTML = array[array.length - 1].DATE;
+
+
+    
+  landsTotal.innerText = parseInt(array[array.length - 1].TOTAL_NO_OF_TILES_PURCHASED).toLocaleString('en-US');
+  landsT1.innerText = parseInt(array[array.length - 1].NO_OF_T1_TILES_PURCHASED).toLocaleString('en-US');
+  landsT2.innerText = parseInt(array[array.length - 1].NO_OF_T2_TILES_PURCHASED).toLocaleString('en-US');
+  landsT3.innerText = parseInt(array[array.length - 1].NO_OF_T3_TILES_PURCHASED).toLocaleString('en-US');
+  console.log(parseInt("1379372198371.41414").toLocaleString('en-US'));
+  
+
+
 }
+
+
+
+
+
+
+
+
+
 
 afficherDerniereDataJSON();
 
@@ -130,6 +156,7 @@ fetch("data.json")
     createChartLandsT1(data, "line");
     createChartLandsT2(data, "line");
     createChartLandsT3(data, "line");
+
 
     
   });

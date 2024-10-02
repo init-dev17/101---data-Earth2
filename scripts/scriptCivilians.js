@@ -6,25 +6,25 @@ function createChartCivilians(data, type) {
     type: type,
     data: {
       //labels: /*abcisses*/ ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6'],
-      labels: data.map((row) => row.DATE),
+      labels: data.slice(0, 77).map((row) => row.DATE),
       datasets: /*ordonnées*/ [
         {
           label: "Technicians",
-          data: data.map((row) => row.NO_OF_CYDROID_TECHNICIANS),
+          data: data.slice(0, 77).map((row) => row.NO_OF_CYDROID_TECHNICIANS),
           //backgroundColor: '#000000',
           borderColor: "#2DFC55",
           backgroundColor: "#2DFC55",
         },
         {
           label: "Reckoners",
-          data: data.map((row) => row.NO_OF_ETHER_RECKONERS),
+          data: data.slice(0, 77).map((row) => row.NO_OF_ETHER_RECKONERS),
           //backgroundColor: '#000000',
           borderColor: "blue",
           backgroundColor: "blue",
         },
         {
           label: "Commanders",
-          data: data.map((row) => row.NO_OF_RAID_COMMANDERS),
+          data: data.slice(0, 77).map((row) => row.NO_OF_RAID_COMMANDERS),
           //backgroundColor: '#000000',
           borderColor: "rgb(254,0,76)",
           backgroundColor: "rgb(254,0,76)",

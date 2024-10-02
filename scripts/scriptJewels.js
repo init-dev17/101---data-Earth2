@@ -83,8 +83,8 @@ let jewelsOOScalc = Math.trunc(
 (125000000 - array[array.length - 1].TOTAL_TIER_1_JEWELS_MINED) /
   (jewels7dayscalc / 7)
 );
-jewels24h.innerHTML = jewels24hcalc;
-jewels7days.innerHTML = jewels7dayscalc;
+jewels24h.innerHTML = parseInt(jewels24hcalc).toLocaleString('en-US');
+jewels7days.innerHTML = parseInt(jewels7dayscalc).toLocaleString('en-US');
 jewelsOOS.innerHTML = jewelsOOScalc;
 jewelsEstimatedDate.innerHTML = dateAddDays(jewelsOOScalc,today).toDateString();
 

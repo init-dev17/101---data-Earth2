@@ -127,9 +127,6 @@ async function afficherDerniereDataJSON() {
   landsT1.innerText = parseInt(array[array.length - 1].NO_OF_T1_TILES_PURCHASED).toLocaleString('en-US');
   landsT2.innerText = parseInt(array[array.length - 1].NO_OF_T2_TILES_PURCHASED).toLocaleString('en-US');
   landsT3.innerText = parseInt(array[array.length - 1].NO_OF_T3_TILES_PURCHASED).toLocaleString('en-US');
-  console.log(parseInt("1379372198371.41414").toLocaleString('en-US'));
-  
-
 
 }
 

@@ -224,7 +224,7 @@ footer a{
 /* ************** MEDIA QUERIES ************** */
 
 
-@media screen and (max-width: 750px) { /* Tablette, actif si max-width à 1000px */
+@media screen and (max-width: 950px) { /* Tablette, actif si max-width à 1000px */
     nav{
         display: block;
     }

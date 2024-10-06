@@ -178,14 +178,14 @@ p mark::selection {
 
 }
 .civsData{
-display: flex;
+    display: flex;
 }
 
 .civsData section{
     padding: 25px;
 }
 
-.civs, .cydroids, .jewels, .essence, .geos, .lands, .ether{
+.civs, .cydroids, .jewels, .essence, .geos, .lands, .ether {
     background-color: whitesmoke;
     width: 90%;
     max-width: 1000px;
@@ -194,6 +194,12 @@ display: flex;
 }
 .statsSpan, .geos, .lands, .landsData{
     margin-bottom: 20px;
+}
+
+.essGecko{
+    height: 550px;
+    margin: 150px auto 0;
+    max-width: 1000px;
 }
 
 

@@ -217,6 +217,9 @@ p mark::selection {
     margin: 0 auto;
 }
 
+.img-skins img{
+    width: 100%;
+}
 
 #skin-btn{
     background-color: #578EF8; /* Green */

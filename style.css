@@ -204,6 +204,49 @@ p mark::selection {
 
 
 
+.skins-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.img-skins{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin: 0 auto;
+}
+
+
+#skin-btn{
+    background-color: #578EF8; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 20px auto 0;
+    user-select: none;
+    transition: 0.3s;
+    
+}
+#skin-btn:hover{
+    background-color: #1c3d7e;
+}
+#skin-btn:active{
+    background-color: black;
+}
+.infos-skins{
+    padding: 0 0 0 25px;
+}
+  
+
+
 footer{
     margin-top: 200px;
     display: flex;

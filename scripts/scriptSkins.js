@@ -52,6 +52,7 @@ fetch("./scripts/skins.json")
                 const imgBtn = document.createElement("button");
                 imgBtn.innerText = "Play"
                 imgBtn.setAttribute("id","skin-btn");
+                imgBtn.setAttribute("onclick",`window.open('${data[release][skin].Video}');`);
 
                 const img = document.createElement("img");
                 img.src = "./assets/Skins/" + data[release][skin].Image;

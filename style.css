@@ -209,11 +209,12 @@ p mark::selection {
     grid-template-columns: 1fr 1fr;
     width: 90%;
     max-width: 1000px;
+    margin: 0 0 90px 0;
 }
 
 .img-skins{
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto;
     margin: 0 auto;
 }
 

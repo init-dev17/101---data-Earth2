@@ -48,7 +48,8 @@
             "Future_Price_Reduction":"",
             "Price":"",
             "Image":"16K-Type_front_katana.png",
-            "Video":"https://www.youtube.com/watch?v=StM-5IVyz0w"
+            "Video":"https://www.youtube.com/watch?v=StM-5IVyz0w",
+            "Release_Date":""
         },
         {
             "Skin_Name":"Murushierago Pulsar",
@@ -64,7 +65,8 @@
             "Future_Price_Reduction":"",
             "Price":"",
             "Image":"19Pulsar_front_katana.png",
-            "Video":"https://www.youtube.com/watch?v=StM-5IVyz0w"
+            "Video":"https://www.youtube.com/watch?v=StM-5IVyz0w",
+            "Release_Date":""
         },
         {
             "Skin_Name":"Murushierago Cyan",
@@ -80,75 +82,140 @@
             "Future_Price_Reduction":"",
             "Price":"",
             "Image":"02Cyan_front_katana.png",
-            "Video":"https://www.youtube.com/watch?v=StM-5IVyz0w"
+            "Video":"https://www.youtube.com/watch?v=StM-5IVyz0w",
+            "Release_Date":""
         }
     ],
     "Night Blaster":[
         {
             "Skin_Name":"Night Blaster",
             "Description":"Limited Edition Weapon Collectible - Night Blaster",
+            "Total_Supply":"",
+            "Items_Available":"",
+            "EcoSim_Total":"",
+            "EcoSim_Drop_Chance":"",
+            "Base_Item_Required":"",
+            "Customisation":"",
             "Can_Be_Resold":"Yes",
+            "Future_Price_Reduction":"",
             "Price":"25 ESS / E$2.5",
             "Image":"Default_5.png",
-            "Video":"https://www.youtube.com/watch?v=p3H_bd2Nbr0"
+            "Video":"https://www.youtube.com/watch?v=p3H_bd2Nbr0",
+            "Release_Date":""
         },
         {
             "Skin_Name":"Night Blaster - Biohazard",
             "Description":"Limited Edition Weapon Collectible - Night Blaster - Biohazard. Special skin crafted using rare fabrics and materials. Cannot be copied in game.",
+            "Total_Supply":"",
+            "Items_Available":"",
+            "EcoSim_Total":"",
+            "EcoSim_Drop_Chance":"",
+            "Base_Item_Required":"",
+            "Customisation":"",
             "Can_Be_Resold":"Yes",
+            "Future_Price_Reduction":"",
             "Price":"100 ESS / E$10",
             "Image":"Biohazard_1.png",
-            "Video":"https://www.youtube.com/watch?v=p3H_bd2Nbr0"
+            "Video":"https://www.youtube.com/watch?v=p3H_bd2Nbr0",
+            "Release_Date":""
         },
         {
             "Skin_Name":"Night Blaster - K-Type",
             "Description":"Limited Edition Weapon Collectible - Night Blaster - K-Type. Special skin crafted using rare fabrics and materials. Cannot be copied in game.",
+            "Total_Supply":"",
+            "Items_Available":"",
+            "EcoSim_Total":"",
+            "EcoSim_Drop_Chance":"",
+            "Base_Item_Required":"",
+            "Customisation":"",
             "Can_Be_Resold":"Yes",
+            "Future_Price_Reduction":"",
             "Price":"",
             "Image":"K-Type_SMG_Blaster.png",
-            "Video":"https://www.youtube.com/watch?v=p3H_bd2Nbr0"
+            "Video":"https://www.youtube.com/watch?v=p3H_bd2Nbr0",
+            "Release_Date":""
         },
         {
             "Skin_Name":"Night Blaster - Pulsar",
             "Description":"Limited Edition Weapon Collectible - Night Blaster - Pulsar. Special skin crafted using rare fabrics and materials. Cannot be copied in game.",
+            "Total_Supply":"",
+            "Items_Available":"",
+            "EcoSim_Total":"",
+            "EcoSim_Drop_Chance":"",
+            "Base_Item_Required":"",
+            "Customisation":"",
             "Can_Be_Resold":"Yes",
+            "Future_Price_Reduction":"",
             "Price":"",
             "Image":"Pulsar_5.png",
-            "Video":"https://www.youtube.com/watch?v=p3H_bd2Nbr0"
+            "Video":"https://www.youtube.com/watch?v=p3H_bd2Nbr0",
+            "Release_Date":""
         }
     ],
     "Night's Edge":[
         {
             "Skin_Name":"Night's Edge",
             "Description":"",
+            "Total_Supply":"",
+            "Items_Available":"",
+            "EcoSim_Total":"",
+            "EcoSim_Drop_Chance":"",
+            "Base_Item_Required":"",
+            "Customisation":"",
             "Can_Be_Resold":"",
+            "Future_Price_Reduction":"",
             "Price":"25 ESS / E$2.5",
             "Image":"",
-            "Video":"https://www.youtube.com/watch?v=WPUs0qwz3-8"
+            "Video":"https://www.youtube.com/watch?v=WPUs0qwz3-8",
+            "Release_Date":""
         },
         {
             "Skin_Name":"Night's Edge - Biohazard",
             "Description":"Limited Edition Weapon Collectible - Night's Edge - Biohazard. Special skin crafted using rare fabrics and materials. Cannot be copied in game.",
+            "Total_Supply":"",
+            "Items_Available":"",
+            "EcoSim_Total":"",
+            "EcoSim_Drop_Chance":"",
+            "Base_Item_Required":"",
+            "Customisation":"",
             "Can_Be_Resold":"Yes",
+            "Future_Price_Reduction":"",
             "Price":"100 ESS / E$10",
             "Image":"Biohazard_4.png",
-            "Video":"https://www.youtube.com/watch?v=WPUs0qwz3-8"
+            "Video":"https://www.youtube.com/watch?v=WPUs0qwz3-8",
+            "Release_Date":""
         },
         {
             "Skin_Name":"Night's Edge - K-Type",
             "Description":"Limited Edition Weapon Collectible - Night's Edge - K-Type. Special skin crafted using rare fabrics and materials. Cannot be copied in game.",
+            "Total_Supply":"",
+            "Items_Available":"",
+            "EcoSim_Total":"",
+            "EcoSim_Drop_Chance":"",
+            "Base_Item_Required":"",
+            "Customisation":"",
             "Can_Be_Resold":"Yes",
+            "Future_Price_Reduction":"",
             "Price":"",
             "Image":"K-Type_4.png",
-            "Video":"https://www.youtube.com/watch?v=WPUs0qwz3-8"
+            "Video":"https://www.youtube.com/watch?v=WPUs0qwz3-8",
+            "Release_Date":""
         },
         {
             "Skin_Name":"Night's Edge - Pulsar",
             "Description":"Limited Edition Weapon Collectible - Night's Edge - Pulsar. Special skin crafted using rare fabrics and materials. Cannot be copied in game.",
+            "Total_Supply":"",
+            "Items_Available":"",
+            "EcoSim_Total":"",
+            "EcoSim_Drop_Chance":"",
+            "Base_Item_Required":"",
+            "Customisation":"",
             "Can_Be_Resold":"Yes",
+            "Future_Price_Reduction":"",
             "Price":"",
             "Image":"Pulsar_4.png",
-            "Video":"https://www.youtube.com/watch?v=WPUs0qwz3-8"
+            "Video":"https://www.youtube.com/watch?v=WPUs0qwz3-8",
+            "Release_Date":""
         }
     ]
        

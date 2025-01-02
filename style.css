@@ -152,20 +152,17 @@ p mark::selection {
     
 }
 
-
 .charts{
     display: grid;
     justify-items: center;
 }
-
-
 
 .charts h2{
     font-family: "Audiowide";
 
     font-size: 2rem;
     margin: 30px;
-    margin-top: 140px;
+    margin-top: 4rem;
 }
 .charts h3{
     color: whitesmoke;
@@ -202,8 +199,6 @@ p mark::selection {
     margin: 150px auto 0;
     max-width: 1000px;
 }
-
-
 
 .skins-container{
     display: grid;
@@ -252,8 +247,6 @@ p mark::selection {
     padding: 0 0 0 25px;
 }
   
-
-
 footer{
     margin-top: 200px;
     display: flex;
@@ -276,9 +269,18 @@ footer a{
     z-index: 4;
 }
 
+canvas {
+    background-color: #191A1F;
+    border-width: 5px;
+    margin: 1px;
+    padding: 10px;
+  }
+.essenceData {
+    padding-bottom: 15px;
+}
+
 
 /* ************** MEDIA QUERIES ************** */
-
 
 @media screen and (max-width: 950px) { /* Tablette, actif si max-width à 1000px */
     nav{
@@ -314,16 +316,9 @@ footer a{
      #CODE{
          height: 46px;    
      }  
+     .civs, .cydroids, .jewels, .essence, .geos, .lands, .ether {
+        width: 99%;
+     }
 }
 
-
-canvas  {
-    background-color: #191A1F;
-    border-width: 5px;
-    margin: 1px;
-    padding: 10px;
-  }
-.essenceData{
-    padding-bottom: 15px;
-}
 

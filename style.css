@@ -179,6 +179,7 @@ p mark::selection {
 }
 .civsData{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .civsData section{

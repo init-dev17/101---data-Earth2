@@ -56,7 +56,9 @@ nav{
 
 nav ul{
 display: flex;
-justify-content: space-evenly;  
+justify-content: space-evenly;
+/* justify-content: center;
+gap: 10vh;*/   
 }
 nav a, nav #language{
     height: 86%;

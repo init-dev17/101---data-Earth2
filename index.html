@@ -74,8 +74,30 @@
 
   <h2> Last update : <span id="lastUpdate"></span></h2>
 
-  <h2>Civilians 1st edition (max: 500k each)</h2>
+  <h2>Jewels Tier1 (max: 125+25 millions)</h2>
+  <section class="statsSpan">
+  <span>Last 24h : +</span><span id="jewels24h"></span><br>
+  <span>Last 7 days : +</span><span id="jewels7days"></span><br>
+  <span>Out of stock in : </span><span id="jewelsOOS"></span><span> days</span><br>
+  <span>Estimated date : </span><span id="jewelsEstimatedDate"></span>
+  </section>
+  <div class="jewels">  
+    <canvas id="e2T1minedJewels" aria-label="chart" role="img"></canvas>
+  </div>
 
+  <h2>Cydroids gen1 (max: 5 millions)</h2>
+  <section class="statsSpan">
+    <span>Last 24h : +</span><span id="cydroids24h"></span><br>
+    <span>Last 7 days : +</span><span id="cydroids7days"></span><br>
+    <span>Out of stock in : </span></span><span id="cydroidsOOS"></span><span> days</span><br>
+    <span>Estimated date : </span><span id="cydroidsEstimatedDate"></span>
+  </section>
+    <div class="cydroids">  
+      <canvas id="e2cydroids" aria-label="chart" role="img"></canvas>
+    </div>
+
+
+  <h2>Civilians 1st edition (max: 500k each)</h2>
   <div class="civsData">
     <section id="technicians">
       <h3>Civilians : </h3>
@@ -121,32 +143,12 @@
   <div class="geos">  
     <canvas id="e2geos" aria-label="chart" role="img"></canvas>
   </div>
-  <div class="civs">  
-    <canvas id="e2data" aria-label="chart" role="img"></canvas>
-  </div>
-
-  <h2>Cydroids gen1 (max: 5 millions)</h2>
-  <section class="statsSpan">
-    <span>Last 24h : +</span><span id="cydroids24h"></span><br>
-    <span>Last 7 days : +</span><span id="cydroids7days"></span><br>
-    <span>Out of stock in : </span></span><span id="cydroidsOOS"></span><span> days</span><br>
-    <span>Estimated date : </span><span id="cydroidsEstimatedDate"></span>
-  </section>
-    <div class="cydroids">  
-      <canvas id="e2cydroids" aria-label="chart" role="img"></canvas>
-    </div>
   
 
-  <h2>Jewels Tier1 (max: 125+25 millions)</h2>
-  <section class="statsSpan">
-  <span>Last 24h : +</span><span id="jewels24h"></span><br>
-  <span>Last 7 days : +</span><span id="jewels7days"></span><br>
-  <span>Out of stock in : </span><span id="jewelsOOS"></span><span> days</span><br>
-  <span>Estimated date : </span><span id="jewelsEstimatedDate"></span>
-  </section>
-  <div class="jewels">  
-    <canvas id="e2jewels" aria-label="chart" role="img"></canvas>
-  </div>
+  
+  
+
+  
 
 
   <!-- 
@@ -162,7 +164,7 @@
 
   <div class="essenceData"> 
     <h2>Essence (max: 1 billion)</h2>
-    <span>1st halving : 500 millions</span><br>
+    <span>1st halving : 500 millions - Q2 2026</span><br>
     <span>2nd halving : 750 millions</span><br>
     <span>3rd halving : 875 millions</span><br>
     <span>Coming soon : Chart and halvings prediction</span>

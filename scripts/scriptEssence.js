@@ -33,12 +33,12 @@ function createChartEssence(data4, type4) {
   new Chart(ctxEssence, {
     type: type4,
     data: {
-      labels: ["04/2024", "06/2024"],
+      labels: ["04/2024", "06/2024", "05/2025", "05/2026"],
       datasets: /*ordonnées*/ [
         {
           label: "Essence",
           //data: ['1', '2', '3', '4', '5', '6'],
-          data: [188000000, 300000000],
+          data: [188000000, 300000000, 430000000, 500000000],
           borderColor: "rgb(81,226,195)",
           backgroundColor: "rgb(81,226,195)",
         },
@@ -102,3 +102,24 @@ fetch("data.json")
     createChartEther(data,"bar");
     createChartEssence(data, "line");
 });
+
+
+
+
+
+
+/*
+
+
+Au 15 mai 2025: 64,410,742 $ESS miné depuis le 1er juin 2024
+Soit 185088 $ESS miné par jour depuis le 1er juin 2024
+
+1m7 Ether généré chaque jour avec 15.38% de conversion = 110500 $ESS généré par jour
+
+
+https://earth2.io/news/ess-31-mar-25
+As of May 14, 2025 with the tokens flagged for minting since March 31 and the newly minted $ESS tokens included in this update, Earth 2 has surpassed a significant milestone of 430,000,000 minted tokens. This achievement brings us less than 70,000,000 tokens away from the first halving event.
+
+
+
+*/

@@ -272,8 +272,8 @@ function createChartCydroids(data2, type2) {
           label: "Cydroids",
           //data: ['1', '2', '3', '4', '5', '6'],
           data: data2.map((row) => row.NO_OF_CYDROIDS),
-          borderColor: "whitesmoke",
-          backgroundColor: "whitesmoke",
+          borderColor: "#8AA8C4",
+          backgroundColor: "#8AA8C4",
         },
       ],
     },
@@ -329,17 +329,40 @@ function createChartJewels(data3, type3) {
   });
 }
 
+
+const ctxT1minedJewel = document.getElementById("e2T1minedJewels");
+
+function createChartT1minedJewels(data4, type4) {
+  new Chart(ctxT1minedJewel, {
+    type: type4,
+    data: {
+      labels: data4.map((row) => row.DATE),
+      datasets: /*ordonnées*/ [
+        {
+          label: "Total T1 mined",
+          //data: ['1', '2', '3', '4', '5', '6'],
+          data: data4.map((row) => row.TOTAL_TIER_1_JEWELS_MINED),
+          borderColor: "#FCD25A",
+          backgroundColor: "#FCD25A",
+        },
+      ],
+    },
+  });
+}
+
+
+
 const ctxEssence = document.getElementById("e2essence");
 function createChartEssence(data4, type4) {
   new Chart(ctxEssence, {
     type: type4,
     data: {
-      labels: ["04/2024", "06/2024"],
+      labels: ["04/2024", "06/2024", "05/2025", "05/2026"],
       datasets: /*ordonnées*/ [
         {
           label: "Essence",
           //data: ['1', '2', '3', '4', '5', '6'],
-          data: [188000000, 300000000],
+          data: [188000000, 300000000, 430000000, 500000000],
           borderColor: "rgb(81,226,195)",
           backgroundColor: "rgb(81,226,195)",
         },
@@ -366,9 +389,10 @@ fetch("data.json")
   .then(function (data) {
     createChartGeologists(data,"line");
 
-    createChartCivilians(data, "line");
+    // createChartCivilians(data, "line");
     createChartCydroids(data, "line");
-    createChartJewels(data, "line");
+    //createChartJewels(data, "line");
+    createChartT1minedJewels(data, "line");
     createChartEssence(data, "line");
   });
 // Traitement des données

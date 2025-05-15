@@ -111,8 +111,8 @@ fetch("data.json")
 /*
 
 
-Au 15 mai 2025: 64,410,742 $ESS miné depuis le 1er juin 2024
-Soit 185088 $ESS miné par jour depuis le 1er juin 2024
+Au 31 mars 2025: 64,410,742 $ESS miné depuis le 1er juin 2024 (304 jours)
+Soit 212000 $ESS miné par jour
 
 1m7 Ether généré chaque jour avec 15.38% de conversion = 110500 $ESS généré par jour
 
@@ -120,6 +120,15 @@ Soit 185088 $ESS miné par jour depuis le 1er juin 2024
 https://earth2.io/news/ess-31-mar-25
 As of May 14, 2025 with the tokens flagged for minting since March 31 and the newly minted $ESS tokens included in this update, Earth 2 has surpassed a significant milestone of 430,000,000 minted tokens. This achievement brings us less than 70,000,000 tokens away from the first halving event.
 
+Il reste moins de 430 millions
 
+
+
+Less than 70millions before halving
+Based on ether production:
+I use 1.7 million ether per day = 110500 ESS /day = halving in 636 days : february 2027
+
+From june 1st 2024 to march 31 2025 : 64,410,742 ESS / 304 days = 212000 $ESS/day
+Halving in  330 days : april 2026
 
 */

@@ -3,25 +3,25 @@
 
 let scrap = `Metrics
 NUMBER OF JEWELS CIRCULATING
-67,336,364
+67,395,904
 TOTAL TIER 1 JEWELS CIRCULATION
-62,231,017
+62,287,952
 TOTAL TIER 2 JEWELS CIRCULATION
-1,862,340
+1,863,000
 TOTAL TIER 3 JEWELS CIRCULATION
-3,243,007
+3,244,952
 TOTAL TIER 1 JEWELS MINED
-110,499,974
+110,588,831
 NUMBER OF JEWEL MENTAR SLOTS
-28,157,917
+28,158,127
 TOTAL NO. OF TILES PURCHASED
-127,853,467
+127,909,551
 NO. OF T1 TILES PURCHASED
-67,816,274
+67,816,282
 NO. OF T2 TILES PURCHASED
-50,217,227
+50,218,328
 NO. OF T3 TILES PURCHASED
-9,819,966
+9,874,941
 MAX SUPPLY (MINUS BURNT TOKENS)
 940,613,734
 MINTED TOKENS
@@ -29,17 +29,17 @@ MINTED TOKENS
 BURNT TOKENS
 59,386,266
 E-THER COLLECTED PAST 24 HOURS
-1,681,796
+1,634,299
 BIDS MADE TOTAL
-2,260,031
+2,260,222
 BIDS REJECTED TOTAL
-397,707
+397,755
 TOTAL HOLOBUILDINGS BUILT
-1,285,358
+1,285,399
 NO. OF CYDROIDS
-2,837,948
+2,839,083
 NO. OF CIVILIANS
-1,870,451
+1,870,548
 NO. OF RAID COMMANDERS
 500,000
 NO. OF E-THER RECKONERS
@@ -47,7 +47,7 @@ NO. OF E-THER RECKONERS
 NO. OF CYDROID TECHNICIANS
 500,000
 NO. OF GEOLOGISTS
-370,451`;
+370,548`;
 
 //console.log(scrap);
 
@@ -157,10 +157,15 @@ console.log(index.innerHTML);
 let metrics = document.getElementsByClassName("gap-y-6 grid justify-items-center xl:grid-cols-3 md:grid-cols-2");
 console.log(metrics[0].innerText);
 
+
 // Page Activities
 let metrics = document.getElementsByClassName("ActivityComponent_metricsWrapper__PSYZP");
 console.log(metrics[0].innerText);
-// https://earth2.io/activities
+
+https://earth2.io/activities
+ 
+console.log(document.getElementsByClassName("ActivityComponent_metricsWrapper__PSYZP")[0].innerText);
+
 */
 
 

@@ -357,14 +357,28 @@ function createChartEssence(data4, type4) {
   new Chart(ctxEssence, {
     type: type4,
     data: {
-      labels: ["04/2024", "06/2024", "05/2025", "05/2026"],
+      labels: data4.map((row) => row.DATE),
       datasets: /*ordonnées*/ [
         {
-          label: "Essence",
+          label: "Max supply - burnt tokens (ESS)",
           //data: ['1', '2', '3', '4', '5', '6'],
-          data: [188000000, 300000000, 430000000, 500000000],
+          data: data4.map((row) => row.MAX_SUPPLY_MINUS_BURNT_TOKENS),
+          borderColor: "rgb(255, 255, 255)",
+          backgroundColor: "rgb(255, 255, 255)",
+        },
+        {
+          label: "Minted token (ESS)",
+          //data: ['1', '2', '3', '4', '5', '6'],
+          data: data4.map((row) => row.MINTED_TOKENS),
           borderColor: "rgb(81,226,195)",
           backgroundColor: "rgb(81,226,195)",
+        },
+        {
+          label: "Burned token",
+          //data: ['1', '2', '3', '4', '5', '6'],
+          data: data4.map((row) => row.BURNT_TOKENS),
+          borderColor: "rgb(226, 81, 81)",
+          backgroundColor: "rgb(226, 81, 81)",
         },
       ],
     },

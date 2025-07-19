@@ -40,6 +40,12 @@ function createChartJewels(data3, type3) {
           borderColor: "orange",
           backgroundColor: "orange",
         },
+        {
+          label: "Jewels in mentar slots",
+          data: data3.map((row) => row.NUMBER_OF_JEWEL_MENTAR_SLOTS), 
+          borderColor: "#8AA8C4",
+          backgroundColor: "#8AA8C4",
+        },
       ],
     },
   });
